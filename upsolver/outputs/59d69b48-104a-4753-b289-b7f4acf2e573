@@ -4,15 +4,15 @@
   "supportMapSameKeyMultipleTimes" : false,
   "id" : "59d69b48-104a-4753-b289-b7f4acf2e573",
   "displayData" : {
-    "name" : "mq_device_kochava_lookup_v2",
+    "name" : "mq_device_kochava_lookup",
     "description" : "Duplicate of mq_device_kochava_lookup",
     "creationTime" : "2021-04-28T06:48:16.747056Z",
     "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
-    "modifiedTime" : "2021-04-28T06:49:36.150152Z",
+    "modifiedTime" : "2021-04-28T06:49:43.380472Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "40f94945-881e-4d80-8ebb-2af34a793a73"
+    "versionId" : "666474b3-44cf-47b1-a752-601be75430b3"
   },
   "inputs" : [ "6d99638e-7a31-457c-9dc8-5bd63816ae1c", "79b6b09a-31de-4eaf-a206-28d2ff12182f" ],
   "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
