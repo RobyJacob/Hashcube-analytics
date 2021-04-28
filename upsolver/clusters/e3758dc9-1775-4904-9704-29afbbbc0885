@@ -10,7 +10,7 @@
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "e468e4be-ec20-4a78-ae7d-0940e9c8adb1"
+    "versionId" : "b5613728-3d86-4a36-8819-1d6e6fdd29e1"
   },
   "size" : {
     "min" : "XS",
@@ -31,6 +31,7 @@
   "nextRollTime" : "2021-04-20T11:41:20.319077Z",
   "writeLogsToUpsolver" : false,
   "runReplayCluster" : false,
+  "maxReplayClusterSize" : "XS",
   "extraSecurityGroups" : [ ],
   "scalingProviderOverride" : "lowlatency",
   "deploymentType" : {
@@ -39,7 +40,7 @@
   },
   "isDeleted" : false,
   "lastUpdatedBy" : "roby.jacob@hashcube.com",
-  "lastUpdateTime" : "2021-04-28T04:02:11.798644Z",
+  "lastUpdateTime" : "2021-04-28T07:37:01.196823Z",
   "version" : 58,
   "allowUpsolverSsh" : true,
   "exposePrivateIps" : false,
