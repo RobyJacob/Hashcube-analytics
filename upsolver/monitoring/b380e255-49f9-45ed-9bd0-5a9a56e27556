@@ -1,0 +1,35 @@
+{
+  "id" : "b380e255-49f9-45ed-9bd0-5a9a56e27556",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "isDeleted" : false,
+  "monitor" : {
+    "clazz" : "CloudWatchMonitor",
+    "namespace" : "upsolver",
+    "region" : "us-east-1"
+  },
+  "metrics" : [ {
+    "clazz" : "DataUpdatesUpsolverComputeUnitsMetrics"
+  }, {
+    "clazz" : "IndexerUpsolverComputeUnitsMetrics"
+  }, {
+    "clazz" : "DataUpdatesUtilizationMetrics"
+  }, {
+    "clazz" : "MemoryEnvironmentMetrics"
+  } ],
+  "version" : 58,
+  "displayData" : {
+    "name" : "upsolver-monit",
+    "description" : "",
+    "creationTime" : "2021-04-25T09:15:17.912402Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-25T09:15:17.922062Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "472b0f93-018d-48cf-94ae-8bb431f138bf"
+  },
+  "keyMutator" : {
+    "clazz" : "DefaultKeyMutator"
+  },
+  "hidden" : false
+}

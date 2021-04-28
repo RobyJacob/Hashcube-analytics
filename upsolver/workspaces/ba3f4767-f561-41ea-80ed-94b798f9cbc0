@@ -1,0 +1,16 @@
+{
+  "id" : "ba3f4767-f561-41ea-80ed-94b798f9cbc0",
+  "displayData" : {
+    "name" : "mahjong game",
+    "description" : "Live data of mahjong",
+    "creationTime" : "2021-04-21T07:19:13.734818Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-21T07:19:13.737128Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "41f9a2d7-5761-44e6-93aa-1675cd0275b1"
+  },
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "isLogicalDeleted" : false
+}

@@ -1,0 +1,63 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "bceb9e1b-3a0d-4d9a-83a8-33277918fd4c",
+  "displayData" : {
+    "name" : "mq_user_device_lookup(1)",
+    "description" : "",
+    "creationTime" : "2021-03-24T12:21:06.007666Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-13T10:26:55.855023Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "18399a06-07d6-4a3a-a7fe-5590ad60554f"
+  },
+  "inputs" : [ "2b0f63d4-7c6c-4412-8ad5-2b3729612232" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "outputParameters" : {
+    "clazz" : "IndexOutputParameters",
+    "outputFields" : [ ],
+    "window" : 14400000,
+    "softRetention" : false,
+    "allowPartialKeyQueries" : false,
+    "omitKeyColumns" : false,
+    "isLazyLoad" : false,
+    "isRealTime" : false,
+    "previousVersions" : [ ]
+  },
+  "outputInterval" : 1,
+  "startExecutionFrom" : "2021-03-22T19:21:04.914570Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : false,
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : false,
+  "allReferences" : [ "2b0f63d4-7c6c-4412-8ad5-2b3729612232" ],
+  "versionNumber" : 1
+}

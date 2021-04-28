@@ -1,0 +1,34 @@
+{
+  "id" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connection" : {
+    "clazz" : "S3Connection",
+    "credentials" : {
+      "clazz" : "AwsIntegrationCredentials"
+    },
+    "bucket" : "us-east-1-upsolver-33b7cf17-9f45-4e72-824d-10bd03e88dde",
+    "region" : "us-east-1",
+    "readOnly" : false,
+    "displayData" : {
+      "name" : "S3 Default Output Storage",
+      "description" : "",
+      "creationTime" : "2021-03-16T10:36:19.118699Z",
+      "createdBy" : "",
+      "modifiedTime" : "2021-03-16T10:36:19.119777Z",
+      "modifiedBy" : {
+        "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+      },
+      "versionId" : "8ff4edf7-a888-4622-a0f3-84456155ad0f"
+    },
+    "serverSideEncryptionKey" : {
+      "clazz" : "DefaultEncryptionKey"
+    },
+    "displayValue" : "s3://us-east-1-upsolver-33b7cf17-9f45-4e72-824d-10bd03e88dde/"
+  },
+  "validation" : {
+    "errors" : [ ],
+    "time" : "2021-04-28T06:00:00.610475Z"
+  },
+  "workspaces" : [ ],
+  "extraOrganizationIds" : [ ]
+}

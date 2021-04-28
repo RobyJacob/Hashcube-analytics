@@ -1,0 +1,49 @@
+{
+  "clazz" : "S3OverSQSInput",
+  "id" : "c43ff983-ce39-445d-b9ad-32061faef65c",
+  "globalId" : "c43ff983-ce39-445d-b9ad-32061faef65c",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "757ba22c-ba1b-4eaa-a01e-8058c3edb13e",
+  "prefix" : "mahjong/collectables/",
+  "suffix" : "",
+  "queueName" : "upsolver_c43ff983-ce39-445d-b9ad-32061faef65c_liverdsdata",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "2021-04-27T12:21:35.065235Z",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "displayData" : {
+    "name" : "mq_collectables",
+    "description" : "",
+    "creationTime" : "2021-04-27T12:21:35.065235Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-27T12:22:48.910922Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "bb18952a-5ea5-43be-b4c6-7603ab556bad"
+  },
+  "isDeleted" : false,
+  "softRetention" : false,
+  "version" : 59,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ "ba3f4767-f561-41ea-80ed-94b798f9cbc0" ],
+  "reportingTags" : "",
+  "previewId" : "a7a41a7ef8fe93e5c84c00b25fb71d6a",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Running"
+  },
+  "safeStartTime" : "2021-04-27T12:21:35.065235Z"
+}

@@ -1,0 +1,258 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "fd3ca0ff-40bf-4ee7-9f13-d38241b0a9d5_2",
+  "displayData" : {
+    "name" : "unblock_platform_daily_count",
+    "description" : "Duplicate of unblock_platform_daily_count",
+    "creationTime" : "2021-04-17T10:28:01.483070Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-22T06:19:29.476955Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "076e7eb3-9cdb-406e-9e17-fd5251f334c6"
+  },
+  "inputs" : [ "512a97fc-d3b4-4119-87e9-159f7690279a" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "outputParameters" : {
+    "clazz" : "CompositeHiveMetastoreOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "UNIX_EPOCH_TO_DATE(data.install_time:number)",
+        "field" : {
+          "name" : "partition_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.install_time",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$EpochMillisToInstant"
+        },
+        "inline" : false,
+        "id" : "deab9103-69c7-2437-c84a-17517b863575",
+        "infix" : false,
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "PartitionTimeOutput",
+      "field" : {
+        "clazz" : "PointerFeatureInput",
+        "featureId" : "deab9103-69c7-2437-c84a-17517b863575",
+        "subField" : "",
+        "nativeType" : {
+          "name" : "instant",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "partition_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false
+      },
+      "isAggregated" : true,
+      "outputs" : [ {
+        "name" : "partition_date",
+        "index" : 0,
+        "outputType" : {
+          "name" : "instant",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ],
+        "originalOutput" : {
+          "name" : "partition_date",
+          "index" : 0,
+          "outputType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "warnings" : [ ]
+        }
+      } ]
+    }, {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "platform",
+        "index" : 1,
+        "outputType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ],
+        "originalOutput" : {
+          "name" : "platform",
+          "index" : 1,
+          "outputType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "warnings" : [ ]
+        }
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.platform",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "count",
+        "index" : 2,
+        "outputType" : {
+          "name" : "long",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ],
+        "originalOutput" : {
+          "name" : "count",
+          "index" : 2,
+          "outputType" : {
+            "name" : "long",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "warnings" : [ ]
+        }
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "COUNT(*)",
+        "operation" : {
+          "clazz" : "AggregationType$CountAll2"
+        },
+        "inputFields" : [ ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    } ],
+    "softRetention" : false,
+    "partitionSize" : "Daily",
+    "path" : "",
+    "compression" : {
+      "clazz" : "SnappyCompression",
+      "extension" : "snappy",
+      "headerOffset" : 0,
+      "displayName" : "Snappy"
+    },
+    "mandatory" : {
+      "clazz" : "CompositeHiveMetastoreMandatory",
+      "s3Connection" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+      "hiveMetastores" : [ {
+        "clazz" : "AthenaMetastoreArgs",
+        "connection" : "d083bc39-f592-444f-9217-c173df5ee609",
+        "databaseName" : "upsolverdb",
+        "tableName" : "unblock_platform_daily_count"
+      } ]
+    },
+    "compactionParallelism" : {
+      "clazz" : "NoOperationParallelism"
+    },
+    "selectedOutputType" : "AthenaMetastoreArgs",
+    "runCompactions" : true,
+    "scheduledCompactions" : {
+      "compactions" : [ ]
+    },
+    "upsertPartitionFields" : false,
+    "shouldFlatten" : true,
+    "allowNotPartitionedTable" : false
+  },
+  "outputInterval" : 1440,
+  "startExecutionFrom" : "2021-04-13T11:35:43.814679Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : false,
+  "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "link" : {
+    "parentId" : "fd3ca0ff-40bf-4ee7-9f13-d38241b0a9d5",
+    "rootId" : "fd3ca0ff-40bf-4ee7-9f13-d38241b0a9d5",
+    "currentVersion" : 2,
+    "isCorrection" : false
+  },
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "earliestStartExecutionFrom" : "2021-04-13T11:35:43.814679Z",
+  "executionState" : {
+    "clazz" : "ExecutionState$Running"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "inputInterval" : 1,
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : true,
+  "allReferences" : [ "512a97fc-d3b4-4119-87e9-159f7690279a" ],
+  "versionNumber" : 2
+}

@@ -1,0 +1,375 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "853007e8-06a1-4020-a72a-b05a1a9cf0c8",
+  "displayData" : {
+    "name" : "mq_device_kochava_lookup",
+    "description" : "Duplicate of mq_device_kochava_lookup",
+    "creationTime" : "2021-04-13T09:40:45.915718Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-13T10:26:55.854952Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "dd5e19a9-9c3c-4891-821c-99cb48917890"
+  },
+  "inputs" : [ "2b0f63d4-7c6c-4412-8ad5-2b3729612232", "71119967-9da7-4d09-bca9-6ac7032117b8" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "outputParameters" : {
+    "clazz" : "IndexOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "uid",
+        "index" : 0,
+        "warnings" : [ ],
+        "originalOutput" : {
+          "name" : "uid",
+          "index" : 0,
+          "warnings" : [ ]
+        }
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.uid",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "network_name",
+        "index" : 1,
+        "warnings" : [ ],
+        "originalOutput" : {
+          "name" : "network_name",
+          "index" : 1,
+          "warnings" : [ ]
+        }
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "network_name",
+        "operation" : {
+          "clazz" : "AggregationType$Last"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.network_name",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "site_id",
+        "index" : 2,
+        "warnings" : [ ],
+        "originalOutput" : {
+          "name" : "site_id",
+          "index" : 2,
+          "warnings" : [ ]
+        }
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "site_id",
+        "operation" : {
+          "clazz" : "AggregationType$Last"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.site_id",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "((data.uid:string = data.uid:string) OR (data.kochava_id:string = data.kochava_id:string)) OR (data.idfa:string = data.device_id:string)",
+        "field" : {
+          "name" : "__WHERE_filter_0__",
+          "nativeType" : {
+            "name" : "boolean",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "InlineFeatureInput",
+          "nativeType" : {
+            "name" : "boolean",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "dsl" : "(data.uid:string = data.uid:string) OR (data.kochava_id:string = data.kochava_id:string)",
+          "feature" : {
+            "clazz" : "BooleanFeatures$OrFilterV3"
+          },
+          "featureInputs" : [ {
+            "clazz" : "InlineFeatureInput",
+            "nativeType" : {
+              "name" : "boolean",
+              "isArray" : false,
+              "subFields" : [ ]
+            },
+            "dsl" : "data.uid:string = data.uid:string",
+            "feature" : {
+              "clazz" : "AnyFeatures$EqualToFilterV2"
+            },
+            "featureInputs" : [ {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.uid",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            }, {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.uid",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            } ],
+            "infix" : true
+          }, {
+            "clazz" : "InlineFeatureInput",
+            "nativeType" : {
+              "name" : "boolean",
+              "isArray" : false,
+              "subFields" : [ ]
+            },
+            "dsl" : "data.kochava_id:string = data.kochava_id:string",
+            "feature" : {
+              "clazz" : "AnyFeatures$EqualToFilterV2"
+            },
+            "featureInputs" : [ {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.kochava_id",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            }, {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.kochava_id",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            } ],
+            "infix" : true
+          } ],
+          "infix" : true
+        }, {
+          "clazz" : "InlineFeatureInput",
+          "nativeType" : {
+            "name" : "boolean",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "dsl" : "data.idfa:string = data.device_id:string",
+          "feature" : {
+            "clazz" : "AnyFeatures$EqualToFilterV2"
+          },
+          "featureInputs" : [ {
+            "clazz" : "FieldFeatureInput",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            },
+            "field" : {
+              "name" : "data.idfa",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            },
+            "isAggregationField" : false,
+            "isFromInline" : false
+          }, {
+            "clazz" : "FieldFeatureInput",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            },
+            "field" : {
+              "name" : "data.device_id",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            },
+            "isAggregationField" : false,
+            "isFromInline" : false
+          } ],
+          "infix" : true
+        } ],
+        "feature" : {
+          "clazz" : "BooleanFeatures$OrFilterV3"
+        },
+        "filterParameters" : {
+          "enabled" : true,
+          "inverted" : false,
+          "filterSort" : 0
+        },
+        "inline" : true,
+        "id" : "1a4b9128-e450-4bc1-b0e3-0304b99169d0",
+        "infix" : true,
+        "blockId" : "96eda790-a9ae-46bd-98d6-1d68b734d600",
+        "pathForRead" : { }
+      }
+    } ],
+    "window" : 14400000,
+    "softRetention" : false,
+    "allowPartialKeyQueries" : false,
+    "omitKeyColumns" : false,
+    "isLazyLoad" : false,
+    "isRealTime" : false,
+    "previousVersions" : [ ]
+  },
+  "outputInterval" : 1,
+  "windowSize" : 14400000,
+  "startExecutionFrom" : "2021-03-22T19:21:04.914570Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : false,
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "executionState" : {
+    "clazz" : "ExecutionState$Running"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ {
+    "id" : "96eda790-a9ae-46bd-98d6-1d68b734d600",
+    "title" : "Select Block",
+    "expression" : "// GENERATED @ 2021-03-27T16:59:51.813191Z\nSELECT data.uid AS uid,\n    LAST(data.network_name) AS network_name,\n    LAST(data.site_id) AS site_id\n  FROM (SELECT * FROM \"mq_user_device_source\" UNION ALL\n        SELECT * FROM \"mq_kochava_events_source\")\n    WHERE data.uid = data.uid OR data.kochava_id = data.kochava_id OR data.idfa = data.device_id\n    GROUP BY data.uid\n",
+    "dslWarnings" : [ ],
+    "isSelectBlock" : true
+  } ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "inputInterval" : 1,
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : true,
+  "allReferences" : [ "2b0f63d4-7c6c-4412-8ad5-2b3729612232", "71119967-9da7-4d09-bca9-6ac7032117b8" ],
+  "versionNumber" : 1
+}

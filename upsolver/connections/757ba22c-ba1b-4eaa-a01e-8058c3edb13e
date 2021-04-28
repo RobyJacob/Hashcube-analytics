@@ -1,0 +1,79 @@
+{
+  "id" : "757ba22c-ba1b-4eaa-a01e-8058c3edb13e",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connection" : {
+    "clazz" : "S3ConnectionWithSQS",
+    "credentials" : {
+      "clazz" : "RoleBasedCredentials",
+      "arnRole" : "arn:aws:iam::107921610082:role/upsolver-role-33b7cf17-9f45-4e72-824d-10bd03e88dde",
+      "externalId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+      "integration" : {
+        "clazz" : "DefaultAwsCloudIntegration",
+        "accountId" : "107921610082",
+        "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+        "region" : "us-east-1",
+        "hasManagementRole" : false,
+        "includeRegionInRole" : false
+      },
+      "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+      "enforceExternalId" : true
+    },
+    "bucket" : "liverdsdata",
+    "readOnly" : true,
+    "displayData" : {
+      "name" : "liverdsdata_sqs",
+      "description" : "",
+      "creationTime" : "2021-04-13T10:32:23.043303Z",
+      "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+      "modifiedTime" : "2021-04-13T10:32:24.072090Z",
+      "modifiedBy" : {
+        "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+      },
+      "versionId" : "b3bb32df-08f7-491f-a1b2-dabae4b3df18"
+    },
+    "region" : "us-east-1",
+    "s3Connection" : {
+      "clazz" : "S3Connection",
+      "credentials" : {
+        "clazz" : "RoleBasedCredentials",
+        "arnRole" : "arn:aws:iam::107921610082:role/upsolver-role-33b7cf17-9f45-4e72-824d-10bd03e88dde",
+        "externalId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+        "integration" : {
+          "clazz" : "DefaultAwsCloudIntegration",
+          "accountId" : "107921610082",
+          "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+          "region" : "us-east-1",
+          "hasManagementRole" : false,
+          "includeRegionInRole" : false
+        },
+        "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+        "enforceExternalId" : true
+      },
+      "bucket" : "liverdsdata",
+      "region" : "us-east-1",
+      "readOnly" : true,
+      "displayData" : {
+        "name" : "liverdsdata_sqs",
+        "description" : "",
+        "creationTime" : "2021-04-13T10:32:23.043303Z",
+        "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+        "modifiedTime" : "2021-04-13T10:32:24.072090Z",
+        "modifiedBy" : {
+          "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+        },
+        "versionId" : "a41cc02f-a0c8-4e16-87d9-8f04fe0ed387"
+      },
+      "serverSideEncryptionKey" : {
+        "clazz" : "DefaultEncryptionKey"
+      },
+      "displayValue" : "s3://liverdsdata/"
+    },
+    "displayValue" : "s3://liverdsdata/"
+  },
+  "validation" : {
+    "errors" : [ ],
+    "time" : "2021-04-28T06:00:00.610475Z"
+  },
+  "workspaces" : [ ],
+  "extraOrganizationIds" : [ ]
+}

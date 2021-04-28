@@ -1,0 +1,501 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "d0b964e4-a6ed-4eda-9afb-cfce0e4dd079",
+  "displayData" : {
+    "name" : "Upsolver-tutorials-orders-output",
+    "description" : "",
+    "creationTime" : "2021-03-30T09:32:49.648143Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-13T08:26:09.426421Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "29f8df63-b1a4-4842-96c2-1cf59ac0f9dd"
+  },
+  "inputs" : [ "0590b6d8-0832-4db7-82a1-86f11567be2e" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : false,
+  "outputParameters" : {
+    "clazz" : "CompositeHiveMetastoreOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "UNIX_EPOCH_TO_DATE(time:number)",
+        "field" : {
+          "name" : "partition_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "time",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$EpochMillisToInstant"
+        },
+        "inline" : false,
+        "id" : "bc2061e0-0f67-acf8-a715-8368842557ba",
+        "infix" : false,
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "buyeremail",
+        "index" : 0,
+        "outputType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.buyerEmail",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "eventtype",
+        "index" : 1,
+        "outputType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.eventType",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "nettotal",
+        "index" : 2,
+        "outputType" : {
+          "name" : "double",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.netTotal",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "orderid",
+        "index" : 4,
+        "outputType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.orderId",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "salestax",
+        "index" : 5,
+        "outputType" : {
+          "name" : "double",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.salesTax",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "shipmentstatus",
+        "index" : 6,
+        "outputType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.shipmentStatus",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "trackingnumber",
+        "index" : 8,
+        "outputType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.trackingNumber",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ {
+        "name" : "order_date",
+        "index" : 9,
+        "outputType" : {
+          "name" : "instant",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "TO_DATE(data.orderDate:string)",
+        "field" : {
+          "name" : "order_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.orderDate",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "StringFeatures$ToDate2Feature"
+        },
+        "inline" : false,
+        "id" : "1d4c3931-debd-c557-9c84-ee8cba0a99b8",
+        "infix" : false,
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "item_id",
+        "index" : 10,
+        "outputType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.data.items[].itemId",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "item_price",
+        "index" : 11,
+        "outputType" : {
+          "name" : "double",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.data.items[].price",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ {
+        "name" : "order_total",
+        "index" : 12,
+        "outputType" : {
+          "name" : "double",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "data.netTotal:number + data.salesTax:number",
+        "field" : {
+          "name" : "order_total",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.netTotal",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        }, {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.salesTax",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "SimpleNumericFeatures$AddFeature"
+        },
+        "inline" : false,
+        "id" : "bf21fbb7-7b9f-ed9c-b7db-68d9542cb6d4",
+        "infix" : false,
+        "pathForRead" : { }
+      }
+    } ],
+    "softRetention" : false,
+    "partitionSize" : "Daily",
+    "path" : "",
+    "compression" : {
+      "clazz" : "SnappyCompression",
+      "extension" : "snappy",
+      "headerOffset" : 0,
+      "displayName" : "Snappy"
+    },
+    "compactionParallelism" : {
+      "clazz" : "NoOperationParallelism"
+    },
+    "selectedOutputType" : "AthenaMetastoreArgs",
+    "runCompactions" : true,
+    "scheduledCompactions" : {
+      "compactions" : [ ]
+    },
+    "upsertPartitionFields" : false,
+    "shouldFlatten" : true,
+    "allowNotPartitionedTable" : false
+  },
+  "outputInterval" : 1,
+  "startExecutionFrom" : "2021-03-22T09:00:00Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : false,
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : false,
+  "allReferences" : [ "0590b6d8-0832-4db7-82a1-86f11567be2e" ],
+  "versionNumber" : 1
+}

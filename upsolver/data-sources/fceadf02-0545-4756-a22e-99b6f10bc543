@@ -1,0 +1,43 @@
+{
+  "clazz" : "UploadFileInput",
+  "id" : "fceadf02-0545-4756-a22e-99b6f10bc543",
+  "globalId" : "fceadf02-0545-4756-a22e-99b6f10bc543",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "displayData" : {
+    "name" : "currency_rates",
+    "description" : "",
+    "creationTime" : "2021-04-22T09:55:35.986697Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-24T05:07:36.027519Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "fcab5442-046b-4d9d-b4d5-c3359312c085"
+  },
+  "contentType" : {
+    "clazz" : "JsonContentType",
+    "nestedJsonPaths" : [ ],
+    "nestedJsons" : [ ],
+    "splitRootArray" : true,
+    "keepOriginalNestedJsonString" : false,
+    "storeJsonAsString" : true
+  },
+  "startExecutionFrom" : "2021-04-22T09:53:00Z",
+  "folder" : "uploads/85868fd4-7195-431b-a4a0-7cea3b69062b",
+  "isDeleted" : true,
+  "physicalDelete" : {
+    "initiated" : true,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "workspaces" : [ ],
+  "previewId" : "bc15f7ae5a22fcc60329aea1aa242e84",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "safeStartTime" : "2021-04-22T09:53:00Z"
+}

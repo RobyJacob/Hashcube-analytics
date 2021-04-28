@@ -1,0 +1,157 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "75c2f4f1-0bb3-4437-8693-62f30f8ad180",
+  "displayData" : {
+    "name" : "mq_cash_purchase_upsolver",
+    "description" : "",
+    "creationTime" : "2021-04-21T10:00:24.712417Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-25T19:40:43.892801Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "19152571-8b80-439a-a805-193cff78c420"
+  },
+  "inputs" : [ "181129a2-4176-4d4f-a0ee-5d8cb891b94e" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : false,
+  "outputParameters" : {
+    "clazz" : "UpsolverOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "GET_RANGE(1, 10)",
+        "field" : {
+          "name" : "numbers",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : true,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "LiteralFeatureInput",
+          "literal" : 1,
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        }, {
+          "clazz" : "LiteralFeatureInput",
+          "literal" : 10,
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$GetRangeFeature",
+          "maxLimit" : 10000000
+        },
+        "inline" : false,
+        "id" : "a5f75bd0-9698-52af-e549-4252404eeb4b",
+        "infix" : false,
+        "blockId" : "1f53a2d6-9c93-43f0-8578-f2d6c057bb4d",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "uid",
+        "index" : 0,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.uid",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "RawOutput",
+      "outputs" : [ {
+        "name" : "usd_amount",
+        "index" : 1,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.usd_amount",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    } ],
+    "softRetention" : false,
+    "addTimeField" : true,
+    "path" : "",
+    "shouldFlatten" : false
+  },
+  "outputInterval" : 1,
+  "startExecutionFrom" : "2021-04-13T12:52:20.939992Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : false,
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ {
+    "id" : "1f53a2d6-9c93-43f0-8578-f2d6c057bb4d",
+    "title" : "Select Block",
+    "expression" : "SET numbers = GET_RANGE(1, 10);\n// GENERATED @ 2021-04-21T10:19:21.091137Z\nSELECT data.uid AS uid:STRING,\n    data.usd_amount as usd_amount\n  FROM \"mq_cash_purchase\"\n    \n",
+    "dslWarnings" : [ ],
+    "isSelectBlock" : true
+  } ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : false,
+  "allReferences" : [ "181129a2-4176-4d4f-a0ee-5d8cb891b94e" ],
+  "versionNumber" : 1
+}

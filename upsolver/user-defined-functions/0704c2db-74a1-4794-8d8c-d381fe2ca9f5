@@ -1,0 +1,41 @@
+{
+  "clazz" : "PythonUserDefinedFunction",
+  "id" : "0704c2db-74a1-4794-8d8c-d381fe2ca9f5",
+  "name" : "get_streak",
+  "documentation" : "",
+  "arguments" : [ {
+    "name" : "date_time_arr",
+    "typeName" : {
+      "name" : "string",
+      "isArray" : true,
+      "subFields" : [ ]
+    }
+  } ],
+  "returnType" : {
+    "name" : "number",
+    "isArray" : true,
+    "subFields" : [ ]
+  },
+  "position" : {
+    "fileName" : "upsolver_udf.py",
+    "lineNumber" : 15
+  },
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connectionId" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "token" : "6b420dd7-10c6-41e8-8856-3c19da0168a4/upsolver_udf.py",
+  "displayData" : {
+    "name" : "get_streak",
+    "description" : "",
+    "creationTime" : "2021-04-26T18:54:26.353712Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-26T18:56:14.297431Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "feeede63-ec27-4f9f-b416-5aee3162bf79"
+  },
+  "deprecation" : {
+    "message" : "User defined function has been deprecated",
+    "since" : "2021-04-26T18:56:14.297288Z"
+  }
+}

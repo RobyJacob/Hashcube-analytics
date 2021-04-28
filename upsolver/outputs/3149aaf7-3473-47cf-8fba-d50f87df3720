@@ -1,0 +1,741 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "3149aaf7-3473-47cf-8fba-d50f87df3720",
+  "displayData" : {
+    "name" : "last_week_installs_count",
+    "description" : "",
+    "creationTime" : "2021-03-30T10:42:15.438581Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-13T10:26:55.855106Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "30dc50c1-caba-4487-9d68-30265da098b3"
+  },
+  "inputs" : [ "2b0f63d4-7c6c-4412-8ad5-2b3729612232" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "outputParameters" : {
+    "clazz" : "CompositeHiveMetastoreOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "UNIX_EPOCH_TO_DATE(time:number)",
+        "field" : {
+          "name" : "event_time",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "time",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$EpochMillisToInstant"
+        },
+        "inline" : false,
+        "id" : "79c0d767-9ada-d006-681b-17a6bf0d59f7",
+        "infix" : false,
+        "blockId" : "5b982572-8e2c-4f55-8a0c-2a81761412da",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "UNIX_EPOCH_TO_DATE(data.install_time:number)",
+        "field" : {
+          "name" : "install_time",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.install_time",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$EpochMillisToInstant"
+        },
+        "inline" : false,
+        "id" : "f7e9b41b-3027-af27-1da8-bbd41f1275dc",
+        "infix" : false,
+        "blockId" : "5b982572-8e2c-4f55-8a0c-2a81761412da",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "CASE  WHEN CONTAINS(data.uid:string, 'Android') THEN 'Android' WHEN CONTAINS(data.uid:string, 'IP') THEN 'IOS' END",
+        "field" : {
+          "name" : "type",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "InlineFeatureInput",
+          "nativeType" : {
+            "name" : "boolean",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "dsl" : "CONTAINS(data.uid:string, 'Android')",
+          "feature" : {
+            "clazz" : "StringFeatures$ContainsFilter"
+          },
+          "featureInputs" : [ {
+            "clazz" : "FieldFeatureInput",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            },
+            "field" : {
+              "name" : "data.uid",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            },
+            "isAggregationField" : false,
+            "isFromInline" : false
+          }, {
+            "clazz" : "LiteralFeatureInput",
+            "literal" : "Android",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          } ],
+          "infix" : false
+        }, {
+          "clazz" : "LiteralFeatureInput",
+          "literal" : "Android",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        }, {
+          "clazz" : "InlineFeatureInput",
+          "nativeType" : {
+            "name" : "boolean",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "dsl" : "CONTAINS(data.uid:string, 'IP')",
+          "feature" : {
+            "clazz" : "StringFeatures$ContainsFilter"
+          },
+          "featureInputs" : [ {
+            "clazz" : "FieldFeatureInput",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            },
+            "field" : {
+              "name" : "data.uid",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            },
+            "isAggregationField" : false,
+            "isFromInline" : false
+          }, {
+            "clazz" : "LiteralFeatureInput",
+            "literal" : "IP",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          } ],
+          "infix" : false
+        }, {
+          "clazz" : "LiteralFeatureInput",
+          "literal" : "IOS",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        } ],
+        "feature" : {
+          "clazz" : "AnyFeatures$CaseWhen"
+        },
+        "inline" : false,
+        "id" : "09031b04-f6d6-4c27-a396-c90496371428",
+        "infix" : false,
+        "blockId" : "5b982572-8e2c-4f55-8a0c-2a81761412da",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : null,
+        "field" : {
+          "name" : "dl",
+          "nativeType" : {
+            "name" : "lookup_a216afad-bbac-4051-bb42-7d55e6c1a105",
+            "isArray" : false,
+            "subFields" : [ {
+              "name" : "uid",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            }, {
+              "name" : "variant",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            }, {
+              "name" : "device_id",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            }, {
+              "name" : "ip_address",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            }, {
+              "name" : "device_name",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            }, {
+              "name" : "installed_version",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            }, {
+              "name" : "start_time",
+              "nativeType" : {
+                "name" : "instant",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            } ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.uid",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        }, {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "time",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "TemplateLookupFeature",
+          "indexId" : "a216afad-bbac-4051-bb42-7d55e6c1a105",
+          "aggregations" : [ {
+            "clazz" : "NewIndexAggregation",
+            "name" : "uid",
+            "operation" : {
+              "clazz" : "AggregationType$Last"
+            },
+            "inputFields" : [ {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.uid",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            } ],
+            "expirationWindow" : 14400000,
+            "isKeyColumn" : true,
+            "withBitmaps" : false,
+            "maximumExpirationWindow" : 14400000,
+            "returnType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          }, {
+            "clazz" : "NewIndexAggregation",
+            "name" : "variant",
+            "operation" : {
+              "clazz" : "AggregationType$Last"
+            },
+            "inputFields" : [ {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.variant",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            } ],
+            "expirationWindow" : 14400000,
+            "isKeyColumn" : false,
+            "withBitmaps" : false,
+            "maximumExpirationWindow" : 14400000,
+            "returnType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          }, {
+            "clazz" : "NewIndexAggregation",
+            "name" : "device_id",
+            "operation" : {
+              "clazz" : "AggregationType$Last"
+            },
+            "inputFields" : [ {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.device_id",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            } ],
+            "expirationWindow" : 14400000,
+            "isKeyColumn" : false,
+            "withBitmaps" : false,
+            "maximumExpirationWindow" : 14400000,
+            "returnType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          }, {
+            "clazz" : "NewIndexAggregation",
+            "name" : "ip_address",
+            "operation" : {
+              "clazz" : "AggregationType$Last"
+            },
+            "inputFields" : [ {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.ip_address",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            } ],
+            "expirationWindow" : 14400000,
+            "isKeyColumn" : false,
+            "withBitmaps" : false,
+            "maximumExpirationWindow" : 14400000,
+            "returnType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          }, {
+            "clazz" : "NewIndexAggregation",
+            "name" : "device_name",
+            "operation" : {
+              "clazz" : "AggregationType$Last"
+            },
+            "inputFields" : [ {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.device_name",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            } ],
+            "expirationWindow" : 14400000,
+            "isKeyColumn" : false,
+            "withBitmaps" : false,
+            "maximumExpirationWindow" : 14400000,
+            "returnType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          }, {
+            "clazz" : "NewIndexAggregation",
+            "name" : "installed_version",
+            "operation" : {
+              "clazz" : "AggregationType$Last"
+            },
+            "inputFields" : [ {
+              "clazz" : "FieldFeatureInput",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "data.installed_version",
+                "nativeType" : {
+                  "name" : "string",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false,
+              "isFromInline" : false
+            } ],
+            "expirationWindow" : 14400000,
+            "isKeyColumn" : false,
+            "withBitmaps" : false,
+            "maximumExpirationWindow" : 14400000,
+            "returnType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          }, {
+            "clazz" : "NewIndexAggregation",
+            "name" : "start_time",
+            "operation" : {
+              "clazz" : "AggregationType$Last"
+            },
+            "inputFields" : [ {
+              "clazz" : "PointerFeatureInput",
+              "featureId" : "ffc8a420-dc96-cb08-0729-2649a6fd10e7",
+              "subField" : "",
+              "nativeType" : {
+                "name" : "instant",
+                "isArray" : false,
+                "subFields" : [ ]
+              },
+              "field" : {
+                "name" : "start_time",
+                "nativeType" : {
+                  "name" : "instant",
+                  "isArray" : false,
+                  "subFields" : [ ]
+                }
+              },
+              "isAggregationField" : false
+            } ],
+            "expirationWindow" : 14400000,
+            "isKeyColumn" : false,
+            "withBitmaps" : false,
+            "maximumExpirationWindow" : 14400000,
+            "returnType" : {
+              "name" : "instant",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          } ],
+          "timeOffset" : 0,
+          "useLatestSnapshot" : false,
+          "innerJoin" : false,
+          "useMutatedIndex" : false
+        },
+        "inline" : true,
+        "id" : "53f3dd89-f236-4bbb-8951-1027451fe78f",
+        "infix" : false,
+        "blockId" : "5b982572-8e2c-4f55-8a0c-2a81761412da",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "DATE_ADD('week', -1, event_time)",
+        "field" : {
+          "name" : "last_week",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "LiteralFeatureInput",
+          "literal" : -1,
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        }, {
+          "clazz" : "PointerFeatureInput",
+          "featureId" : "79c0d767-9ada-d006-681b-17a6bf0d59f7",
+          "subField" : "",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "event_time",
+            "nativeType" : {
+              "name" : "instant",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false
+        } ],
+        "feature" : {
+          "clazz" : "DateAddFeature",
+          "unit" : "week"
+        },
+        "inline" : false,
+        "id" : "d5d1d476-c0f0-c705-44b2-47589723c5d2",
+        "infix" : false,
+        "blockId" : "5b982572-8e2c-4f55-8a0c-2a81761412da",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "UpsertKeyOutput",
+      "field" : {
+        "clazz" : "PointerFeatureInput",
+        "featureId" : "53f3dd89-f236-4bbb-8951-1027451fe78f",
+        "subField" : "device_name",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "dl.device_name",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false
+      },
+      "isAggregated" : true,
+      "outputs" : [ {
+        "name" : "device_name",
+        "index" : 1,
+        "warnings" : [ ]
+      } ]
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "installs",
+        "index" : 0,
+        "outputType" : {
+          "name" : "long",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "installs",
+        "operation" : {
+          "clazz" : "AggregationType$CountAll2"
+        },
+        "inputFields" : [ ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    } ],
+    "softRetention" : false,
+    "partitionSize" : "Daily",
+    "path" : "",
+    "compression" : {
+      "clazz" : "SnappyCompression",
+      "extension" : "snappy",
+      "headerOffset" : 0,
+      "displayName" : "Snappy"
+    },
+    "mandatory" : {
+      "clazz" : "CompositeHiveMetastoreMandatory",
+      "s3Connection" : "978d6fcb-6ba7-45a4-a975-1207eb66ea38",
+      "hiveMetastores" : [ {
+        "clazz" : "AthenaMetastoreArgs",
+        "connection" : "d083bc39-f592-444f-9217-c173df5ee609",
+        "databaseName" : "analyticsdb",
+        "tableName" : "tmp_table"
+      } ]
+    },
+    "compactionParallelism" : {
+      "clazz" : "NoOperationParallelism"
+    },
+    "selectedOutputType" : "AthenaMetastoreArgs",
+    "runCompactions" : true,
+    "scheduledCompactions" : {
+      "compactions" : [ ]
+    },
+    "upsertPartitionFields" : false,
+    "shouldFlatten" : true,
+    "allowNotPartitionedTable" : false
+  },
+  "outputInterval" : 1,
+  "windowSize" : 10080,
+  "startExecutionFrom" : "2021-03-22T19:21:04.914570Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : false,
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ {
+    "id" : "5b982572-8e2c-4f55-8a0c-2a81761412da",
+    "title" : "Select Block",
+    "expression" : "SET event_time = UNIX_EPOCH_TO_DATE(time);\nSET install_time = UNIX_EPOCH_TO_DATE(data.install_time);\nSET type = CASE WHEN CONTAINS(data.uid, 'Android') THEN 'Android' WHEN CONTAINS(data.uid, 'IP') THEN 'IOS' END;\nSET last_week = DATE_ADD('week', -1, event_time);\n// GENERATED @ 2021-03-30T20:10:50.435563Z\nSELECT COUNT(*) AS installs:BIGINT,\n       dl.device_name AS device_name:STRING\n  FROM \"mq_user_device_source\"\n      LEFT JOIN mq_device_lookup dl ON dl.uid = data.uid\n    GROUP BY dl.device_name WINDOW 7 DAYS \n    REPLACE ON DUPLICATE \n",
+    "dslWarnings" : [ ],
+    "isSelectBlock" : true
+  } ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : true,
+  "allReferences" : [ "a216afad-bbac-4051-bb42-7d55e6c1a105", "2b0f63d4-7c6c-4412-8ad5-2b3729612232" ],
+  "versionNumber" : 1
+}

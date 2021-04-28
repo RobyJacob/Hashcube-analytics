@@ -1,0 +1,227 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "00fa31ab-e9d6-4f74-bdb8-940370c43b8b",
+  "displayData" : {
+    "name" : "unblock_ad_agg",
+    "description" : "",
+    "creationTime" : "2021-04-21T20:17:23.395460Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-22T07:22:00.659896Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "7f7b11db-dc5a-4f85-93c1-29eb69edf807"
+  },
+  "inputs" : [ "6bfc0a7a-c780-47bb-8da0-ae28aaf38483" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "outputParameters" : {
+    "clazz" : "CompositeHiveMetastoreOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "UNIX_EPOCH_TO_DATE(data.\"date\":number)",
+        "field" : {
+          "name" : "partition_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.date",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$EpochMillisToInstant"
+        },
+        "inline" : false,
+        "id" : "ac09a83a-77a8-1e84-9592-899fd38acd65",
+        "infix" : false,
+        "blockId" : "1b4228b3-3c24-41d3-b9c5-18b8aec4c62d",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "screen",
+        "index" : 1,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.screen",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "ad_type",
+        "index" : 3,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.ad_type",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "PartitionTimeOutput",
+      "field" : {
+        "clazz" : "PointerFeatureInput",
+        "featureId" : "ac09a83a-77a8-1e84-9592-899fd38acd65",
+        "subField" : "",
+        "nativeType" : {
+          "name" : "instant",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "partition_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false
+      },
+      "isAggregated" : true,
+      "outputs" : [ {
+        "name" : "partition_date",
+        "index" : 0,
+        "warnings" : [ ]
+      } ]
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "count",
+        "index" : 2,
+        "outputType" : {
+          "name" : "long",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "count",
+        "operation" : {
+          "clazz" : "AggregationType$CountAll2"
+        },
+        "inputFields" : [ ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    } ],
+    "softRetention" : false,
+    "partitionSize" : "Daily",
+    "path" : "",
+    "compression" : {
+      "clazz" : "SnappyCompression",
+      "extension" : "snappy",
+      "headerOffset" : 0,
+      "displayName" : "Snappy"
+    },
+    "compactionParallelism" : {
+      "clazz" : "NoOperationParallelism"
+    },
+    "selectedOutputType" : "OpenLakeHiveMetastoreArgs",
+    "runCompactions" : true,
+    "scheduledCompactions" : {
+      "compactions" : [ ]
+    },
+    "upsertPartitionFields" : false,
+    "shouldFlatten" : true,
+    "allowNotPartitionedTable" : false
+  },
+  "outputInterval" : 1,
+  "startExecutionFrom" : "2021-04-21T12:57:51.349005Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : false,
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ {
+    "id" : "1b4228b3-3c24-41d3-b9c5-18b8aec4c62d",
+    "title" : "Select Block",
+    "expression" : "SET partition_date = UNIX_EPOCH_TO_DATE(data.\"date\");\n// GENERATED @ 2021-04-21T20:28:30.219871Z\nSELECT PARTITION_TIME(partition_date) AS partition_date:TIMESTAMP,\n       data.screen AS screen,\n       COUNT(*) AS \"count\":BIGINT,\n       data.ad_type AS ad_type\n  FROM \"unblock_ad_clicks\"  \n    GROUP BY data.screen,\n          data.ad_type,\n          PARTITION_TIME(partition_date)\n    APPEND ON DUPLICATE\n",
+    "dslWarnings" : [ ],
+    "isSelectBlock" : true
+  } ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : true,
+  "allReferences" : [ "6bfc0a7a-c780-47bb-8da0-ae28aaf38483" ],
+  "versionNumber" : 1
+}

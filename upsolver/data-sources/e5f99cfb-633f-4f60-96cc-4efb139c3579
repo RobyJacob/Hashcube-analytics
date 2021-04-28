@@ -1,0 +1,53 @@
+{
+  "clazz" : "S3OverSQSInput",
+  "id" : "e5f99cfb-633f-4f60-96cc-4efb139c3579",
+  "globalId" : "e5f99cfb-633f-4f60-96cc-4efb139c3579",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "5cc856b5-da0c-479e-aa06-6a751b2a2546",
+  "prefix" : "cash_purchase/",
+  "suffix" : "",
+  "queueName" : "upsolver_e5f99cfb-633f-4f60-96cc-4efb139c3579_liverdsdata",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "2021-03-26T07:38:10.520032Z",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "displayData" : {
+    "name" : "mq_cash_purchase_s3_source",
+    "description" : "",
+    "creationTime" : "2021-03-26T07:38:10.520032Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-13T10:23:58.873229Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "99279aae-cba3-44a9-96fa-73e750d42d9e"
+  },
+  "isDeleted" : true,
+  "softRetention" : false,
+  "physicalDelete" : {
+    "initiated" : true,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "previewId" : "09443785bb1b960a57f224a760186390",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "safeStartTime" : "2021-03-26T07:38:10.520032Z"
+}

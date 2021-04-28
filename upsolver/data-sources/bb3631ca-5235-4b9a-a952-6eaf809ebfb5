@@ -1,0 +1,74 @@
+{
+  "clazz" : "ExternalInput",
+  "id" : "bb3631ca-5235-4b9a-a952-6eaf809ebfb5",
+  "globalId" : "bb3631ca-5235-4b9a-a952-6eaf809ebfb5",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "displayData" : {
+    "name" : "mq_user_gs_stats_all_source",
+    "description" : "",
+    "creationTime" : "2021-03-17T17:52:11.258568Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-15T17:48:34.266240Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "5c1a4034-f579-498a-b192-08a2df0bb634"
+  },
+  "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "2021-03-17T19:26:00Z",
+  "interval" : 1,
+  "contentType" : {
+    "clazz" : "JsonContentType",
+    "nestedJsonPaths" : [ ],
+    "nestedJsons" : [ ],
+    "splitRootArray" : true,
+    "keepOriginalNestedJsonString" : false,
+    "storeJsonAsString" : false
+  },
+  "classDefinition" : {
+    "clazz" : "EmbeddedExternalClassDefinition",
+    "className" : "com.upsolver.datasources.jdbc.JDBCDataSource"
+  },
+  "externalProperties" : {
+    "properties" : {
+      "Timestamp Columns" : "date_time",
+      "User Name" : "umahjong",
+      "Table Name" : "user_gs_stats_all",
+      "Schema Pattern" : "mahjong",
+      "Keep JDBC source types" : "true",
+      "Connection String" : "jdbc:mysql://sudokureadreplica.c4ukltubprdq.us-east-1.rds.amazonaws.com/mahjong"
+    },
+    "encryptedProperties" : {
+      "Password" : "F/ocCJNr8nkW5mMwm7vvFRdOdx/dVP5vN6T/UBhf/jY="
+    }
+  },
+  "isDeleted" : false,
+  "softRetention" : false,
+  "physicalDelete" : {
+    "initiated" : true,
+    "shouldRun" : true
+  },
+  "operationParallelism" : {
+    "clazz" : "TaskTimeOperationParallelismProvider",
+    "parallelismByTime" : [ ],
+    "defaultTotalShards" : 1,
+    "defaultShardType" : {
+      "clazz" : "ShardingType$ByTask"
+    }
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "previewId" : "3ed96777efc4b398f4cd45ddf90ef5be",
+  "needsElasticIP" : true,
+  "isRunning" : false,
+  "parallelism" : 1,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Deleting"
+  },
+  "safeStartTime" : "2021-03-17T19:26:00Z"
+}

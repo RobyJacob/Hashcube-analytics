@@ -1,0 +1,264 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "5818d2f0-e130-484a-b24c-470f377d99e2",
+  "displayData" : {
+    "name" : "mq_kochava_lookup",
+    "description" : "Duplicate of mq_kochava_lookup",
+    "creationTime" : "2021-04-16T05:57:58.328304Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-16T06:17:13.906692Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "d2f3207b-71da-4db9-b3f1-c23308074c18"
+  },
+  "inputs" : [ "79b6b09a-31de-4eaf-a206-28d2ff12182f" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "outputParameters" : {
+    "clazz" : "IndexOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "kochava_id",
+        "index" : 1,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.kochava_id",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "uid",
+        "index" : 0,
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "uid",
+        "operation" : {
+          "clazz" : "AggregationType$Last"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.uid",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "idfa",
+        "index" : 2,
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "idfa",
+        "operation" : {
+          "clazz" : "AggregationType$Last"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.idfa",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "network_name",
+        "index" : 3,
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "network_name",
+        "operation" : {
+          "clazz" : "AggregationType$Last"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.network_name",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "site_id",
+        "index" : 4,
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "site_id",
+        "operation" : {
+          "clazz" : "AggregationType$Last"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.site_id",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    } ],
+    "mandatory" : {
+      "clazz" : "MandatoryIndexOutputParameters",
+      "queryEnvironment" : [ "362f7e6c-4795-4b19-86ce-6a6f49c4c420" ],
+      "storage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+      "createInfiniteWindow" : false
+    },
+    "window" : 14400000,
+    "softRetention" : false,
+    "allowPartialKeyQueries" : false,
+    "omitKeyColumns" : false,
+    "isLazyLoad" : false,
+    "isRealTime" : false,
+    "previousVersions" : [ ]
+  },
+  "outputInterval" : 1,
+  "windowSize" : 14400000,
+  "startExecutionFrom" : "2021-04-13T12:59:52.669958Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : true,
+  "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "physicalDelete" : {
+    "initiated" : true,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "earliestStartExecutionFrom" : "2021-04-13T12:59:52.669958Z",
+  "executionState" : {
+    "clazz" : "ExecutionState$Running"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ {
+    "id" : "592ed55f-c41a-43f7-a038-55961137e6c6",
+    "title" : "Select Block",
+    "expression" : "// GENERATED @ 2021-04-16T05:50:38.800501Z\nSELECT LAST(data.uid) AS uid,\n       data.kochava_id AS kochava_id,\n       LAST(data.idfa) AS idfa,\n       LAST(data.network_name) AS network_name,\n       LAST(data.site_id) AS site_id\n  FROM \"mq_kochava_events\"  \n    GROUP BY data.kochava_id\n    \n",
+    "dslWarnings" : [ ],
+    "isSelectBlock" : true
+  } ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "inputInterval" : 1,
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : true,
+  "allReferences" : [ "79b6b09a-31de-4eaf-a206-28d2ff12182f" ],
+  "versionNumber" : 1
+}

@@ -1,0 +1,49 @@
+{
+  "clazz" : "S3OverSQSInput",
+  "id" : "79b6b09a-31de-4eaf-a206-28d2ff12182f",
+  "globalId" : "79b6b09a-31de-4eaf-a206-28d2ff12182f",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "757ba22c-ba1b-4eaa-a01e-8058c3edb13e",
+  "prefix" : "mahjong/kochava_events/",
+  "suffix" : "",
+  "queueName" : "upsolver_79b6b09a-31de-4eaf-a206-28d2ff12182f_liverdsdata",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "2021-04-13T12:59:52.669958Z",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "displayData" : {
+    "name" : "mq_kochava_events",
+    "description" : "",
+    "creationTime" : "2021-04-13T12:59:52.669958Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-21T07:22:30.250389Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "6bbaf210-3290-4274-8a8f-10e268279a0c"
+  },
+  "isDeleted" : false,
+  "softRetention" : false,
+  "version" : 58,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ "ba3f4767-f561-41ea-80ed-94b798f9cbc0" ],
+  "reportingTags" : "",
+  "previewId" : "c7b83c10526d21f4aa7ac582dbb65aaa",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Running"
+  },
+  "safeStartTime" : "2021-04-13T12:59:52.669958Z"
+}

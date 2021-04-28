@@ -1,0 +1,368 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "ffeec3e1-8c52-4071-8e14-82038591f0ba",
+  "displayData" : {
+    "name" : "mq_currency_conversion_lookup",
+    "description" : "",
+    "creationTime" : "2021-04-27T18:16:17.730459Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-27T18:19:44.955240Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "3e04e1b0-8498-4fe7-87be-b725365bf058"
+  },
+  "inputs" : [ "05ade5d7-702e-48b6-bba4-e6aa83131320" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "outputParameters" : {
+    "clazz" : "IndexOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "UNIX_EPOCH_TO_DATE(data.date_time:number)",
+        "field" : {
+          "name" : "date_time",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.date_time",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$EpochMillisToInstant"
+        },
+        "inline" : false,
+        "id" : "9c214f0b-8e32-e31c-7e66-2b1dc84265c9",
+        "infix" : false,
+        "blockId" : "c988fd26-e16b-4c53-af2c-69458ec3592f",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : null,
+        "field" : {
+          "name" : "currency_rates_reference",
+          "nativeType" : {
+            "name" : "lookup",
+            "isArray" : false,
+            "subFields" : [ {
+              "name" : "currency",
+              "nativeType" : {
+                "name" : "string",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            }, {
+              "name" : "rates",
+              "nativeType" : {
+                "name" : "number",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            } ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.local_currency",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "ReferenceDataFeatureV2",
+          "referenceDataId" : "69ac34e2-8888-4fbd-b032-ad129b5422c6",
+          "keyFields" : [ {
+            "name" : "currency",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          } ],
+          "valueFields" : [ {
+            "name" : "currency",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          }, {
+            "name" : "rates",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          } ],
+          "refreshIntervalSeconds" : 0
+        },
+        "inline" : true,
+        "id" : "2df53b56-e7c5-8dfa-7454-8d564128ed93",
+        "infix" : false,
+        "blockId" : "c988fd26-e16b-4c53-af2c-69458ec3592f",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "data.local_amount:number / (currency_rates_reference.rates * 0.83)",
+        "field" : {
+          "name" : "amount",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.local_amount",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        }, {
+          "clazz" : "InlineFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "dsl" : "currency_rates_reference.rates * 0.83",
+          "feature" : {
+            "clazz" : "SimpleNumericFeatures$MultiplyFeature"
+          },
+          "featureInputs" : [ {
+            "clazz" : "PointerFeatureInput",
+            "featureId" : "2df53b56-e7c5-8dfa-7454-8d564128ed93",
+            "subField" : "rates",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            },
+            "field" : {
+              "name" : "currency_rates_reference.rates",
+              "nativeType" : {
+                "name" : "number",
+                "isArray" : false,
+                "subFields" : [ ]
+              }
+            },
+            "isAggregationField" : false
+          }, {
+            "clazz" : "LiteralFeatureInput",
+            "literal" : 0.83,
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          } ],
+          "infix" : true
+        } ],
+        "feature" : {
+          "clazz" : "SimpleNumericFeatures$DivideFeature"
+        },
+        "inline" : false,
+        "id" : "ee202f01-8efa-43bd-b2dd-157b1493529c",
+        "infix" : true,
+        "blockId" : "c988fd26-e16b-4c53-af2c-69458ec3592f",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "uid",
+        "index" : 0,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.uid",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "date_time",
+        "index" : 1,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "PointerFeatureInput",
+        "featureId" : "9c214f0b-8e32-e31c-7e66-2b1dc84265c9",
+        "subField" : "",
+        "nativeType" : {
+          "name" : "instant",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "date_time",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "usd_amount",
+        "index" : 2,
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "usd_amount",
+        "operation" : {
+          "clazz" : "AggregationType$Last"
+        },
+        "inputFields" : [ {
+          "clazz" : "PointerFeatureInput",
+          "featureId" : "ee202f01-8efa-43bd-b2dd-157b1493529c",
+          "subField" : "",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "amount",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    } ],
+    "mandatory" : {
+      "clazz" : "MandatoryIndexOutputParameters",
+      "queryEnvironment" : [ "362f7e6c-4795-4b19-86ce-6a6f49c4c420" ],
+      "storage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+      "createInfiniteWindow" : false
+    },
+    "window" : 14400000,
+    "softRetention" : false,
+    "allowPartialKeyQueries" : false,
+    "omitKeyColumns" : false,
+    "isLazyLoad" : false,
+    "isRealTime" : false,
+    "previousVersions" : [ ]
+  },
+  "outputInterval" : 1,
+  "windowSize" : 14400000,
+  "startExecutionFrom" : "2021-04-25T19:42:13.287005Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : false,
+  "isRunning" : true,
+  "deployedEver" : true,
+  "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "version" : 59,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "earliestStartExecutionFrom" : "2021-04-25T19:42:13.287005Z",
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ {
+    "id" : "c988fd26-e16b-4c53-af2c-69458ec3592f",
+    "title" : "Select Block",
+    "expression" : "SET date_time = UNIX_EPOCH_TO_DATE(data.date_time);\nSET amount = data.local_amount / (currency_rates_reference.rates * 0.83);\n// GENERATED @ 2021-04-27T18:18:02.911659Z\nSELECT data.uid AS uid,\n       date_time AS date_time,\n       LAST(amount) AS usd_amount\n  FROM \"mq_cash_purchase_v2\" LEFT JOIN currency_rates currency_rates_reference ON currency_rates_reference.currency = data.local_currency \n    GROUP BY data.uid,\n          date_time\n    \n",
+    "dslWarnings" : [ ],
+    "isSelectBlock" : true
+  } ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "inputInterval" : 1,
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Running"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : true,
+  "allReferences" : [ "05ade5d7-702e-48b6-bba4-e6aa83131320" ],
+  "versionNumber" : 1
+}

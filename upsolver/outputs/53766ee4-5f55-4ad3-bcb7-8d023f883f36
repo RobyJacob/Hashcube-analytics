@@ -1,0 +1,347 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "53766ee4-5f55-4ad3-bcb7-8d023f883f36",
+  "displayData" : {
+    "name" : "mq_transaction_count_lookup",
+    "description" : "Duplicate of mq_transaction_count_lookup",
+    "creationTime" : "2021-04-21T17:35:04.928936Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-25T19:40:44.279901Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "2d1f19bd-5183-42c5-bfeb-9b95b5665ede"
+  },
+  "inputs" : [ "181129a2-4176-4d4f-a0ee-5d8cb891b94e" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "outputParameters" : {
+    "clazz" : "IndexOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "UNIX_EPOCH_TO_DATE(data.date_time:number)",
+        "field" : {
+          "name" : "payment_time",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.date_time",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$EpochMillisToInstant"
+        },
+        "inline" : false,
+        "id" : "391fee3d-8544-1f86-e811-1db017bc2531",
+        "infix" : false,
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "USER_AGENT_PARSER('Is Fake', data.receipt:string)",
+        "field" : {
+          "name" : "fake",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.receipt",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "UserAgentParser",
+          "attributes" : [ "Is Fake" ]
+        },
+        "inline" : false,
+        "id" : "12f1f49b-b9a4-9da5-5fb0-ce21a361c5e1",
+        "infix" : false,
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "fake = 'false'",
+        "field" : {
+          "name" : "not_fake_mask",
+          "nativeType" : {
+            "name" : "boolean",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "PointerFeatureInput",
+          "featureId" : "12f1f49b-b9a4-9da5-5fb0-ce21a361c5e1",
+          "subField" : "",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "fake",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false
+        }, {
+          "clazz" : "LiteralFeatureInput",
+          "literal" : "false",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        } ],
+        "feature" : {
+          "clazz" : "AnyFeatures$EqualToFilterV2"
+        },
+        "filterParameters" : {
+          "enabled" : false,
+          "inverted" : false
+        },
+        "inline" : false,
+        "id" : "df5e3152-9b69-d8b7-f739-23d26385290b",
+        "infix" : true,
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "fake = 'true'",
+        "field" : {
+          "name" : "is_fake_mask",
+          "nativeType" : {
+            "name" : "boolean",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "PointerFeatureInput",
+          "featureId" : "12f1f49b-b9a4-9da5-5fb0-ce21a361c5e1",
+          "subField" : "",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "fake",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false
+        }, {
+          "clazz" : "LiteralFeatureInput",
+          "literal" : "true",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        } ],
+        "feature" : {
+          "clazz" : "AnyFeatures$EqualToFilterV2"
+        },
+        "filterParameters" : {
+          "enabled" : false,
+          "inverted" : false
+        },
+        "inline" : false,
+        "id" : "95ecc0f9-2e50-24cc-b2c8-c024567d15ae",
+        "infix" : true,
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "uid",
+        "index" : 0,
+        "warnings" : [ ],
+        "originalOutput" : {
+          "name" : "uid",
+          "index" : 0,
+          "warnings" : [ ]
+        }
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.uid",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "total_transactions",
+        "index" : 1,
+        "warnings" : [ ],
+        "originalOutput" : {
+          "name" : "total_transactions",
+          "index" : 1,
+          "warnings" : [ ]
+        }
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "total_transactions",
+        "operation" : {
+          "clazz" : "AggregationType$CountAll2"
+        },
+        "inputFields" : [ ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "payment_time",
+        "index" : 2,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "PointerFeatureInput",
+        "featureId" : "391fee3d-8544-1f86-e811-1db017bc2531",
+        "subField" : "",
+        "nativeType" : {
+          "name" : "instant",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "payment_time",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false
+      }
+    } ],
+    "mandatory" : {
+      "clazz" : "MandatoryIndexOutputParameters",
+      "queryEnvironment" : [ "362f7e6c-4795-4b19-86ce-6a6f49c4c420" ],
+      "storage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+      "createInfiniteWindow" : false
+    },
+    "window" : 14400000,
+    "softRetention" : false,
+    "allowPartialKeyQueries" : false,
+    "omitKeyColumns" : false,
+    "isLazyLoad" : false,
+    "isRealTime" : false,
+    "previousVersions" : [ ]
+  },
+  "outputInterval" : 1,
+  "windowSize" : 14400000,
+  "startExecutionFrom" : "2021-04-13T12:52:20.939992Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : true,
+  "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "earliestStartExecutionFrom" : "2021-04-13T12:52:20.939992Z",
+  "executionState" : {
+    "clazz" : "ExecutionState$Running"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "inputInterval" : 1,
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : true,
+  "allReferences" : [ "181129a2-4176-4d4f-a0ee-5d8cb891b94e" ],
+  "versionNumber" : 1
+}

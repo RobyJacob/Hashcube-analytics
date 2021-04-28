@@ -1,0 +1,63 @@
+{
+  "clazz" : "CloudStorageInput",
+  "id" : "0590b6d8-0832-4db7-82a1-86f11567be2e",
+  "globalId" : "0590b6d8-0832-4db7-82a1-86f11567be2e",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "82e57821-1fff-449f-8c7c-4dbec076ca40",
+  "prefix" : "",
+  "datePattern" : "yyyy/MM/dd/HH",
+  "dataDumpDate" : "2021-03-30T09:31:18.513581Z",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "maxDelay" : 1440,
+  "interval" : 1,
+  "startExecutionFrom" : "2021-03-22T09:00:00Z",
+  "fileMatchPattern" : "^.*$",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "JsonContentType",
+    "nestedJsonPaths" : [ ],
+    "nestedJsons" : [ ],
+    "splitRootArray" : true,
+    "keepOriginalNestedJsonString" : false,
+    "storeJsonAsString" : false
+  },
+  "displayData" : {
+    "name" : "upsolver-tutorials-orders",
+    "description" : "",
+    "creationTime" : "2021-03-30T09:31:18.513592Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-13T08:26:09.432323Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "16320247-f938-4d54-8890-31d40fe17ef0"
+  },
+  "isDeleted" : true,
+  "anchorDatePatternToStart" : true,
+  "softRetention" : false,
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "requestType" : "CloudStorageInputRequest",
+  "workspaces" : [ ],
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "reportingTags" : "",
+  "previewId" : "f9c3a6c420234a0796f9ac7d655c0552",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "safeStartTime" : "2021-03-22T09:00:00Z"
+}

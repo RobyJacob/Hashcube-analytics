@@ -1,0 +1,445 @@
+{
+  "clazz" : "OutputTemplate",
+  "useNewEscaping" : false,
+  "supportMapSameKeyMultipleTimes" : false,
+  "id" : "f7a83182-a022-459e-9e6c-ef411604abc1",
+  "displayData" : {
+    "name" : "items_agg",
+    "description" : "",
+    "creationTime" : "2021-03-30T09:54:14.732631Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-13T08:26:09.426428Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "58037df5-2c1f-441e-9b50-0427777158a4"
+  },
+  "inputs" : [ "0590b6d8-0832-4db7-82a1-86f11567be2e" ],
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "groupBy" : true,
+  "outputParameters" : {
+    "clazz" : "CompositeHiveMetastoreOutputParameters",
+    "outputFields" : [ {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "TO_DATE(data.orderDate:string)",
+        "field" : {
+          "name" : "parsed_order_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.orderDate",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "StringFeatures$ToDate2Feature"
+        },
+        "inline" : false,
+        "id" : "daa6e810-68e2-bbbd-e518-3642becbdc97",
+        "infix" : false,
+        "blockId" : "67d920a7-3f30-467b-aeb8-9881fe937ca1",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "UNIX_EPOCH_TO_DATE(time:number)",
+        "field" : {
+          "name" : "partition_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "time",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "feature" : {
+          "clazz" : "NumericFeatures$EpochMillisToInstant"
+        },
+        "inline" : false,
+        "id" : "b161d74a-2a67-213b-61e8-a3b797d99365",
+        "infix" : false,
+        "blockId" : "67d920a7-3f30-467b-aeb8-9881fe937ca1",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "DATE_FORMAT('yyyy/MM/dd', parsed_order_date)",
+        "field" : {
+          "name" : "order_date",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "PointerFeatureInput",
+          "featureId" : "daa6e810-68e2-bbbd-e518-3642becbdc97",
+          "subField" : "",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "parsed_order_date",
+            "nativeType" : {
+              "name" : "instant",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false
+        } ],
+        "feature" : {
+          "clazz" : "InstantFormat",
+          "format" : "yyyy/MM/dd"
+        },
+        "inline" : false,
+        "id" : "6638452a-0da8-321b-cbda-0894dc80349e",
+        "infix" : false,
+        "blockId" : "67d920a7-3f30-467b-aeb8-9881fe937ca1",
+        "pathForRead" : { }
+      }
+    }, {
+      "clazz" : "KeyColumnOutput",
+      "outputs" : [ {
+        "name" : "data_data_items_itemid",
+        "index" : 1,
+        "warnings" : [ ]
+      } ],
+      "field" : {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "string",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.data.items[].itemId",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      }
+    }, {
+      "clazz" : "PartitionTimeOutput",
+      "field" : {
+        "clazz" : "PointerFeatureInput",
+        "featureId" : "daa6e810-68e2-bbbd-e518-3642becbdc97",
+        "subField" : "",
+        "nativeType" : {
+          "name" : "instant",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "parsed_order_date",
+          "nativeType" : {
+            "name" : "instant",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false
+      },
+      "isAggregated" : true,
+      "outputs" : [ {
+        "name" : "parsed_order_date",
+        "index" : 0,
+        "warnings" : [ ]
+      } ]
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "count_data_data_items_itemid",
+        "index" : 2,
+        "outputType" : {
+          "name" : "long",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "count_data_data_items_itemid",
+        "operation" : {
+          "clazz" : "AggregationType$Count2"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.data.items[].itemId",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "sum_items_price",
+        "index" : 3,
+        "outputType" : {
+          "name" : "decimal-2",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "sum_items_price",
+        "operation" : {
+          "clazz" : "AggregationType$Sum"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.data.items[].price",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "AggregationOutput",
+      "outputs" : [ {
+        "name" : "avg_items_price",
+        "index" : 4,
+        "outputType" : {
+          "name" : "decimal-2",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "warnings" : [ ]
+      } ],
+      "aggregation" : {
+        "clazz" : "NewIndexAggregation",
+        "name" : "avg_items_price",
+        "operation" : {
+          "clazz" : "AggregationType$Avg2"
+        },
+        "inputFields" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.data.items[].price",
+            "nativeType" : {
+              "name" : "number",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        } ],
+        "isKeyColumn" : false,
+        "withBitmaps" : false,
+        "returnType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      }
+    }, {
+      "clazz" : "RawCalculatedFieldOutput",
+      "outputs" : [ ],
+      "featureDefinition" : {
+        "clazz" : "FeatureDefinition",
+        "dsl" : "data.eventType:string = 'ORDER'",
+        "field" : {
+          "name" : "__WHERE_filter_0__",
+          "nativeType" : {
+            "name" : "boolean",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "featureInputs" : [ {
+          "clazz" : "FieldFeatureInput",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          },
+          "field" : {
+            "name" : "data.eventType",
+            "nativeType" : {
+              "name" : "string",
+              "isArray" : false,
+              "subFields" : [ ]
+            }
+          },
+          "isAggregationField" : false,
+          "isFromInline" : false
+        }, {
+          "clazz" : "LiteralFeatureInput",
+          "literal" : "ORDER",
+          "nativeType" : {
+            "name" : "string",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        } ],
+        "feature" : {
+          "clazz" : "AnyFeatures$EqualToFilterV2"
+        },
+        "filterParameters" : {
+          "enabled" : true,
+          "inverted" : false,
+          "filterSort" : 0
+        },
+        "inline" : true,
+        "id" : "dce05e16-1a58-4cfe-8cb0-596e47e1595f",
+        "infix" : true,
+        "blockId" : "67d920a7-3f30-467b-aeb8-9881fe937ca1",
+        "pathForRead" : { }
+      }
+    } ],
+    "softRetention" : false,
+    "partitionSize" : "Daily",
+    "path" : "",
+    "compression" : {
+      "clazz" : "SnappyCompression",
+      "extension" : "snappy",
+      "headerOffset" : 0,
+      "displayName" : "Snappy"
+    },
+    "compactionParallelism" : {
+      "clazz" : "NoOperationParallelism"
+    },
+    "selectedOutputType" : "AthenaMetastoreArgs",
+    "runCompactions" : true,
+    "scheduledCompactions" : {
+      "compactions" : [ ]
+    },
+    "upsertPartitionFields" : false,
+    "shouldFlatten" : true,
+    "allowNotPartitionedTable" : false
+  },
+  "outputInterval" : 1,
+  "startExecutionFrom" : "2021-03-22T09:00:00Z",
+  "allowCartesianProducts" : false,
+  "isDeleted" : true,
+  "isRunning" : false,
+  "deployedEver" : false,
+  "physicalDelete" : {
+    "initiated" : false,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "allowRenaming" : true,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "outputSharding" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "blocks" : [ {
+    "id" : "67d920a7-3f30-467b-aeb8-9881fe937ca1",
+    "title" : "Select Block",
+    "expression" : "SET parsed_order_date = TO_DATE(data.orderDate);\nSET partition_date = UNIX_EPOCH_TO_DATE(time);\nSET order_date = DATE_FORMAT('yyyy/MM/dd', parsed_order_date);\n// GENERATED @ 2021-03-30T10:09:13.590542Z\nSELECT PARTITION_TIME(parsed_order_date) AS parsed_order_date:TIMESTAMP,\n       data.data.items[].itemId AS data_data_items_itemid,\n       COUNT(data.data.items[].itemId) AS count_data_data_items_itemid:BIGINT,\n       SUM(data.data.items[].price) AS sum_items_price:DECIMAL(18,2),\n       AVG(data.data.items[].price) AS avg_items_price:DECIMAL(18,2)\n  FROM \"upsolver-tutorials-orders\" \n WHERE (data.eventType = 'ORDER') \n    GROUP BY data.data.items[].itemId,\n          PARTITION_TIME(parsed_order_date)\n    APPEND ON DUPLICATE\n",
+    "dslWarnings" : [ ],
+    "isSelectBlock" : true
+  } ],
+  "groupByDeletion" : true,
+  "eventTypes" : [ ],
+  "restrictions" : [ ],
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "shards" : 1,
+  "outputShards" : 1,
+  "hasAggregations" : true,
+  "allReferences" : [ "0590b6d8-0832-4db7-82a1-86f11567be2e" ],
+  "versionNumber" : 1
+}

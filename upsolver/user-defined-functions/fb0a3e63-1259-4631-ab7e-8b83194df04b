@@ -1,0 +1,41 @@
+{
+  "clazz" : "PythonUserDefinedFunction",
+  "id" : "fb0a3e63-1259-4631-ab7e-8b83194df04b",
+  "name" : "get_ad_information",
+  "documentation" : "",
+  "arguments" : [ {
+    "name" : "site_id",
+    "typeName" : {
+      "name" : "string",
+      "isArray" : false,
+      "subFields" : [ ]
+    }
+  } ],
+  "returnType" : {
+    "name" : "string",
+    "isArray" : false,
+    "subFields" : [ ]
+  },
+  "position" : {
+    "fileName" : "upsolver_udf.py",
+    "lineNumber" : 142
+  },
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connectionId" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "token" : "c13907d1-1752-4ce1-86e0-ac4428c78017/upsolver_udf.py",
+  "displayData" : {
+    "name" : "get_ad_information",
+    "description" : "",
+    "creationTime" : "2021-04-16T18:56:19.366181Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-26T18:27:32.597012Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "8203d641-6320-45b8-bed4-0994c1de0244"
+  },
+  "deprecation" : {
+    "message" : "User defined function has been deprecated",
+    "since" : "2021-04-26T18:27:32.596181Z"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "displayData" : {
+    "name" : "Default Compute",
+    "description" : "Default Compute for hashcube",
+    "creationTime" : "2021-03-16T10:36:19.118943Z",
+    "createdBy" : "Upsolver Integration",
+    "modifiedTime" : "2021-04-28T04:02:11.798728Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "e468e4be-ec20-4a78-ae7d-0940e9c8adb1"
+  },
+  "size" : {
+    "min" : "XS",
+    "max" : "XL"
+  },
+  "environmentType" : "compute",
+  "region" : "us-east-1",
+  "hosts" : {
+    "hosts" : [ ]
+  },
+  "running" : true,
+  "runOnDefault" : false,
+  "elasticIps" : {
+    "value" : false,
+    "userEmail" : "roby.jacob@hashcube.com"
+  },
+  "instanceTypeOverride" : "r5.4xlarge",
+  "nextRollTime" : "2021-04-20T11:41:20.319077Z",
+  "writeLogsToUpsolver" : false,
+  "runReplayCluster" : false,
+  "extraSecurityGroups" : [ ],
+  "scalingProviderOverride" : "lowlatency",
+  "deploymentType" : {
+    "clazz" : "DeploymentType$AWS",
+    "amiTagName" : "UpsolverPrivateVpc"
+  },
+  "isDeleted" : false,
+  "lastUpdatedBy" : "roby.jacob@hashcube.com",
+  "lastUpdateTime" : "2021-04-28T04:02:11.798644Z",
+  "version" : 58,
+  "allowUpsolverSsh" : true,
+  "exposePrivateIps" : false,
+  "alwaysAssociatePublicIps" : false,
+  "useVersionsCoordinator" : false,
+  "assumeRoleOnServerRole" : false,
+  "storeType" : {
+    "clazz" : "RemoteStoreType",
+    "secretKey" : "vwSRlrcf1If05OmKByxqSDza9cU8yyrpc/A6MUXvDMst6B9j9bUlesCSRjJmWhax"
+  },
+  "workspaces" : [ ],
+  "shouldCompareConfiguration" : true,
+  "tags" : {
+    "tags" : [ {
+      "key" : "cluster",
+      "value" : "upsolver-default"
+    } ]
+  },
+  "extraSpotTypes" : [ ],
+  "lastDeploymentTime" : "2021-03-16T10:36:19.118957Z",
+  "excludeMonitoringReporters" : [ ],
+  "hibernated" : false,
+  "clazz" : "CustomerEnvironment",
+  "serverType" : "2 (r5.4xlarge - 16 cores, 120GB RAM)",
+  "scalingProvider" : "Low Latency",
+  "status" : {
+    "clazz" : "Running"
+  }
+}

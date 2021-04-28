@@ -1,0 +1,41 @@
+{
+  "clazz" : "PythonUserDefinedFunction",
+  "id" : "279e2795-b728-4826-9158-ab4875744978",
+  "name" : "str_to_date",
+  "documentation" : "",
+  "arguments" : [ {
+    "name" : "s",
+    "typeName" : {
+      "name" : "string",
+      "isArray" : false,
+      "subFields" : [ ]
+    }
+  } ],
+  "returnType" : {
+    "name" : "number",
+    "isArray" : false,
+    "subFields" : [ ]
+  },
+  "position" : {
+    "fileName" : "func.py",
+    "lineNumber" : 3
+  },
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connectionId" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "token" : "9d0741c1-b44a-40b9-8ddf-8c18383dc400/func.py",
+  "displayData" : {
+    "name" : "str_to_date",
+    "description" : "",
+    "creationTime" : "2021-03-23T05:29:14.492041Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-15T06:43:38.349709Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "dba83bec-bb6d-4b92-866d-5d956fb2db19"
+  },
+  "deprecation" : {
+    "message" : "User defined function has been deprecated",
+    "since" : "2021-04-15T06:43:38.348925Z"
+  }
+}

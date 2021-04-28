@@ -1,0 +1,49 @@
+{
+  "clazz" : "S3OverSQSInput",
+  "id" : "418d8daa-e96c-4abb-b9aa-485d767cebac",
+  "globalId" : "418d8daa-e96c-4abb-b9aa-485d767cebac",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "64ff2373-addf-4b0f-8c5c-e58ddd7b335d",
+  "prefix" : "unifiedmahjong/an_cash_purchase/",
+  "suffix" : "",
+  "queueName" : "upsolver_418d8daa-e96c-4abb-b9aa-485d767cebac_transformeddata",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "2021-04-22T16:47:24.875049Z",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "displayData" : {
+    "name" : "an_cash_purchase",
+    "description" : "",
+    "creationTime" : "2021-04-22T16:47:24.875049Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-22T16:47:25.508741Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "d5605e48-c544-4dbb-8c1d-fd0b2fa25520"
+  },
+  "isDeleted" : false,
+  "softRetention" : false,
+  "version" : 58,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "previewId" : "b75b366ee546c94e49e24bdb01b70850",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Running"
+  },
+  "safeStartTime" : "2021-04-22T16:47:24.875049Z"
+}

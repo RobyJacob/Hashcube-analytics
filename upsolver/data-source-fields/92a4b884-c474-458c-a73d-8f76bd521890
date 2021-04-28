@@ -1,0 +1,47 @@
+{
+  "inputId" : "92a4b884-c474-458c-a73d-8f76bd521890",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "fields" : [ {
+    "feature" : {
+      "clazz" : "FeatureDefinition",
+      "dsl" : "UNIX_EPOCH_TO_DATE(data.date_time:number)",
+      "field" : {
+        "name" : "datetime",
+        "nativeType" : {
+          "name" : "instant",
+          "isArray" : false,
+          "subFields" : [ ]
+        }
+      },
+      "featureInputs" : [ {
+        "clazz" : "FieldFeatureInput",
+        "nativeType" : {
+          "name" : "number",
+          "isArray" : false,
+          "subFields" : [ ]
+        },
+        "field" : {
+          "name" : "data.date_time",
+          "nativeType" : {
+            "name" : "number",
+            "isArray" : false,
+            "subFields" : [ ]
+          }
+        },
+        "isAggregationField" : false,
+        "isFromInline" : false
+      } ],
+      "feature" : {
+        "clazz" : "NumericFeatures$EpochMillisToInstant"
+      },
+      "inline" : false,
+      "source" : {
+        "source" : "92a4b884-c474-458c-a73d-8f76bd521890",
+        "version" : 1
+      },
+      "id" : "29691534-7fb5-4a55-b35a-b26d6c5ae48d",
+      "infix" : false,
+      "pathForRead" : { }
+    }
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "clazz" : "PythonUserDefinedFunction",
+  "id" : "177307d4-64cf-4853-b90b-c523f71d03dc",
+  "name" : "is_duplicate_receipt",
+  "documentation" : "",
+  "arguments" : [ {
+    "name" : "receipt",
+    "typeName" : {
+      "name" : "string",
+      "isArray" : false,
+      "subFields" : [ ]
+    }
+  } ],
+  "returnType" : {
+    "name" : "boolean",
+    "isArray" : false,
+    "subFields" : [ ]
+  },
+  "position" : {
+    "fileName" : "upsolver_udf.py",
+    "lineNumber" : 36
+  },
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connectionId" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "token" : "4950fa0a-b5f6-453b-ac62-6c3599b71d47/upsolver_udf.py",
+  "displayData" : {
+    "name" : "is_duplicate_receipt",
+    "description" : "",
+    "creationTime" : "2021-04-27T05:40:35.369131Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-27T05:40:35.407850Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "fd1e3083-55b6-48e9-99f9-d719aec4c161"
+  }
+}

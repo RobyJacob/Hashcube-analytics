@@ -1,0 +1,49 @@
+{
+  "clazz" : "S3OverSQSInput",
+  "id" : "11accc40-2c52-41f2-84ab-519183bc0409",
+  "globalId" : "11accc40-2c52-41f2-84ab-519183bc0409",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "757ba22c-ba1b-4eaa-a01e-8058c3edb13e",
+  "prefix" : "unblock/kochava_events/",
+  "suffix" : "",
+  "queueName" : "upsolver_11accc40-2c52-41f2-84ab-519183bc0409_liverdsdata",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "2021-04-21T12:59:13.066684Z",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "displayData" : {
+    "name" : "unblock_kochava_events",
+    "description" : "",
+    "creationTime" : "2021-04-21T12:59:13.066684Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-21T13:00:36.882479Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "ffcbf335-af03-4f02-9903-6b0a420268c4"
+  },
+  "isDeleted" : false,
+  "softRetention" : false,
+  "version" : 58,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ "0a9b199e-5759-4985-bb6e-7fdfd896ddc9" ],
+  "reportingTags" : "",
+  "previewId" : "d7ca701561e3cb578f523c35e2d5ca08",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Running"
+  },
+  "safeStartTime" : "2021-04-21T12:59:13.066684Z"
+}

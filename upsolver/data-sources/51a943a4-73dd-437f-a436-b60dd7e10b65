@@ -1,0 +1,73 @@
+{
+  "clazz" : "ExternalInput",
+  "id" : "51a943a4-73dd-437f-a436-b60dd7e10b65",
+  "globalId" : "51a943a4-73dd-437f-a436-b60dd7e10b65",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "displayData" : {
+    "name" : "mq-jdbc",
+    "description" : "",
+    "creationTime" : "2021-03-16T13:19:51.879725Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-03-16T14:33:38.150816Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "22763365-ac85-4591-8ce3-bae35b846afa"
+  },
+  "connectionPointer" : "657641e4-d965-4abf-a380-8c6e28e4cf6b",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "0119-12-31T08:09:00Z",
+  "interval" : 1,
+  "contentType" : {
+    "clazz" : "JsonContentType",
+    "nestedJsonPaths" : [ ],
+    "nestedJsons" : [ ],
+    "splitRootArray" : true,
+    "keepOriginalNestedJsonString" : false,
+    "storeJsonAsString" : false
+  },
+  "classDefinition" : {
+    "clazz" : "EmbeddedExternalClassDefinition",
+    "className" : "com.upsolver.datasources.jdbc.JDBCDataSource"
+  },
+  "externalProperties" : {
+    "properties" : {
+      "Timestamp Columns" : "date_time",
+      "User Name" : "umahjong",
+      "Table Name" : "cash_purchase",
+      "Keep JDBC source types" : "true",
+      "Connection String" : "jdbc:mysql://sudokureadreplica.c4ukltubprdq.us-east-1.rds.amazonaws.com/mahjong"
+    },
+    "encryptedProperties" : {
+      "Password" : "tmOO9d53ZuflqNxE2DcfTo7KuXPBvRECsRwVA1m48lE="
+    }
+  },
+  "isDeleted" : true,
+  "softRetention" : false,
+  "physicalDelete" : {
+    "initiated" : true,
+    "shouldRun" : false
+  },
+  "operationParallelism" : {
+    "clazz" : "TaskTimeOperationParallelismProvider",
+    "parallelismByTime" : [ ],
+    "defaultTotalShards" : 1,
+    "defaultShardType" : {
+      "clazz" : "ShardingType$ByTask"
+    }
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "previewId" : "7a4a4801dfd797d69c338f34c8b91480",
+  "needsElasticIP" : true,
+  "isRunning" : true,
+  "parallelism" : 1,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "safeStartTime" : "0119-12-31T08:09:00Z"
+}

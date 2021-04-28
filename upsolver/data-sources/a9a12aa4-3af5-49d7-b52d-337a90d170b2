@@ -1,0 +1,49 @@
+{
+  "clazz" : "S3OverSQSInput",
+  "id" : "a9a12aa4-3af5-49d7-b52d-337a90d170b2",
+  "globalId" : "a9a12aa4-3af5-49d7-b52d-337a90d170b2",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "757ba22c-ba1b-4eaa-a01e-8058c3edb13e",
+  "prefix" : "mahjong/fb_user_game/",
+  "suffix" : "",
+  "queueName" : "upsolver_a9a12aa4-3af5-49d7-b52d-337a90d170b2_liverdsdata",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "2021-04-13T12:54:40.763832Z",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "displayData" : {
+    "name" : "mq_fb_user_game",
+    "description" : "",
+    "creationTime" : "2021-04-13T12:54:40.763832Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-21T07:22:46.365742Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "df710ea2-240a-47c0-be57-518b17e4972a"
+  },
+  "isDeleted" : false,
+  "softRetention" : false,
+  "version" : 58,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ "ba3f4767-f561-41ea-80ed-94b798f9cbc0" ],
+  "reportingTags" : "",
+  "previewId" : "4508f37813654411c63ec8a08541ffee",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Running"
+  },
+  "safeStartTime" : "2021-04-13T12:54:40.763832Z"
+}

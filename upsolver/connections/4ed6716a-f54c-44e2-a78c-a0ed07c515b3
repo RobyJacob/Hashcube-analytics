@@ -1,0 +1,31 @@
+{
+  "id" : "4ed6716a-f54c-44e2-a78c-a0ed07c515b3",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connection" : {
+    "clazz" : "KinesisConnection",
+    "credentials" : {
+      "clazz" : "AwsIntegrationCredentials"
+    },
+    "region" : "us-east-1",
+    "displayData" : {
+      "name" : "Kinesis",
+      "description" : "",
+      "creationTime" : "2021-03-16T10:36:19.118760Z",
+      "createdBy" : "",
+      "modifiedTime" : "2021-03-16T10:36:19.119832Z",
+      "modifiedBy" : {
+        "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+      },
+      "versionId" : "930c20e3-dcad-468e-81fa-af2c20e89b7f"
+    },
+    "readOnly" : true,
+    "maxWriters" : 20,
+    "displayValue" : "Kinesis/usEast1"
+  },
+  "validation" : {
+    "errors" : [ ],
+    "time" : "2021-04-28T06:00:00.610475Z"
+  },
+  "workspaces" : [ ],
+  "extraOrganizationIds" : [ ]
+}

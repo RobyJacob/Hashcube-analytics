@@ -1,0 +1,50 @@
+{
+  "id" : "978d6fcb-6ba7-45a4-a975-1207eb66ea38",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connection" : {
+    "clazz" : "S3Connection",
+    "credentials" : {
+      "clazz" : "RoleBasedCredentials",
+      "arnRole" : "arn:aws:iam::107921610082:role/upsolver-role-33b7cf17-9f45-4e72-824d-10bd03e88dde",
+      "externalId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+      "integration" : {
+        "clazz" : "DefaultAwsCloudIntegration",
+        "accountId" : "107921610082",
+        "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+        "region" : "us-east-1",
+        "hasManagementRole" : false,
+        "includeRegionInRole" : false
+      },
+      "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+      "enforceExternalId" : true
+    },
+    "bucket" : "partitioneddata",
+    "region" : "us-east-1",
+    "displayData" : {
+      "name" : "partitioneddata",
+      "description" : "",
+      "creationTime" : "2021-03-21T13:14:54.147009Z",
+      "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+      "modifiedTime" : "2021-03-21T13:14:54.222291Z",
+      "modifiedBy" : {
+        "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+      },
+      "versionId" : "49b61b57-4039-425a-97af-4ac999272426"
+    },
+    "serverSideEncryptionKey" : {
+      "clazz" : "DefaultEncryptionKey"
+    },
+    "displayValue" : "s3://partitioneddata/"
+  },
+  "validation" : {
+    "errors" : [ {
+      "clazz" : "SimpleValidationResult",
+      "property" : "credentials",
+      "error" : "The specified user does not have access credentials to the specified item.One or more of the following permissions may be missing: s3:PutObject",
+      "severity" : "error"
+    } ],
+    "time" : "2021-04-28T06:00:00.610475Z"
+  },
+  "workspaces" : [ ],
+  "extraOrganizationIds" : [ ]
+}

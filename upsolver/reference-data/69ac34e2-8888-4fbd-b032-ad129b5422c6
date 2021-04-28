@@ -1,0 +1,40 @@
+{
+  "id" : "69ac34e2-8888-4fbd-b032-ad129b5422c6",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "displayData" : {
+    "name" : "currency_rates",
+    "description" : "",
+    "creationTime" : "2021-04-24T05:21:30.083205Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-24T05:21:30.084730Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "a86cbfd1-537e-4c32-adba-656d95dccfd8"
+  },
+  "connection" : "2d79eace-54f7-4b63-8ead-dd4543b5cded",
+  "filePath" : "currency_rates.parquet",
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "metadata" : {
+    "fields" : [ {
+      "name" : "currency",
+      "nativeType" : {
+        "name" : "string",
+        "isArray" : false,
+        "subFields" : [ ]
+      }
+    }, {
+      "name" : "rates",
+      "nativeType" : {
+        "name" : "number",
+        "isArray" : false,
+        "subFields" : [ ]
+      }
+    } ],
+    "rows" : 168,
+    "streamSize" : 4169,
+    "partRead" : false
+  }
+}

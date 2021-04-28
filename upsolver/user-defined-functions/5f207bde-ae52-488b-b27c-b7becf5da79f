@@ -1,0 +1,37 @@
+{
+  "clazz" : "PythonUserDefinedFunction",
+  "id" : "5f207bde-ae52-488b-b27c-b7becf5da79f",
+  "name" : "get_streak",
+  "documentation" : "",
+  "arguments" : [ {
+    "name" : "date_time_arr",
+    "typeName" : {
+      "name" : "number",
+      "isArray" : true,
+      "subFields" : [ ]
+    }
+  } ],
+  "returnType" : {
+    "name" : "number",
+    "isArray" : true,
+    "subFields" : [ ]
+  },
+  "position" : {
+    "fileName" : "upsolver_udf.py",
+    "lineNumber" : 15
+  },
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connectionId" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "token" : "1b9f9e0a-1e2e-40eb-9079-4f8d393d0f35/upsolver_udf.py",
+  "displayData" : {
+    "name" : "get_streak",
+    "description" : "",
+    "creationTime" : "2021-04-26T18:58:03.827904Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-26T18:58:03.862499Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "508b69de-949b-4de9-9c5b-de5e7766f5a8"
+  }
+}

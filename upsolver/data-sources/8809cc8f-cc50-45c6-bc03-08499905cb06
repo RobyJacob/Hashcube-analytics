@@ -1,0 +1,67 @@
+{
+  "clazz" : "CloudStorageInput",
+  "id" : "8809cc8f-cc50-45c6-bc03-08499905cb06",
+  "globalId" : "8809cc8f-cc50-45c6-bc03-08499905cb06",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "657641e4-d965-4abf-a380-8c6e28e4cf6b",
+  "prefix" : "",
+  "datePattern" : "yyyy/MM/dd/HH/",
+  "dataDumpDate" : "2021-03-16T11:30:04.299552Z",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "maxDelay" : 1440,
+  "interval" : 1,
+  "startExecutionFrom" : "2021-03-15T11:30:05.520641Z",
+  "fileMatchPattern" : "",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "displayData" : {
+    "name" : "mq-datasource",
+    "description" : "",
+    "creationTime" : "2021-03-16T11:30:04.299562Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-03-20T11:10:18.025527Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "6a48ef4a-dbe4-4030-88ef-d7ca8fa24d2d"
+  },
+  "isDeleted" : true,
+  "anchorDatePatternToStart" : true,
+  "softRetention" : false,
+  "physicalDelete" : {
+    "initiated" : true,
+    "shouldRun" : false
+  },
+  "version" : 58,
+  "operationParallelism" : {
+    "clazz" : "TaskTimeOperationParallelismProvider",
+    "parallelismByTime" : [ ],
+    "defaultTotalShards" : 1,
+    "defaultShardType" : {
+      "clazz" : "ShardingType$ByTask"
+    }
+  },
+  "requestType" : "CloudStorageInputRequest",
+  "workspaces" : [ ],
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "reportingTags" : "",
+  "previewId" : "915dd9317fff8f987a2a20ef2622235c",
+  "initialLoadConfiguration" : {
+    "prefix" : "mahjong",
+    "pattern" : ""
+  },
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Archived"
+  },
+  "safeStartTime" : "2021-03-15T11:30:05.520641Z"
+}

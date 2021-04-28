@@ -1,0 +1,31 @@
+{
+  "id" : "d083bc39-f592-444f-9217-c173df5ee609",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connection" : {
+    "clazz" : "AthenaConnection",
+    "credentials" : {
+      "clazz" : "AwsIntegrationCredentials"
+    },
+    "s3StagingDir" : "s3://aws-athena-query-results-107921610082-us-east-1/upsolver",
+    "region" : "us-east-1",
+    "displayData" : {
+      "name" : "Athena",
+      "description" : "",
+      "creationTime" : "2021-03-16T10:36:19.118768Z",
+      "createdBy" : "",
+      "modifiedTime" : "2021-03-16T10:36:19.119877Z",
+      "modifiedBy" : {
+        "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+      },
+      "versionId" : "2679344c-7ac4-4330-81d7-1b40ebd427ea"
+    },
+    "supportsGlue" : true,
+    "displayValue" : "Athena"
+  },
+  "validation" : {
+    "errors" : [ ],
+    "time" : "2021-04-28T06:00:00.610475Z"
+  },
+  "workspaces" : [ ],
+  "extraOrganizationIds" : [ ]
+}

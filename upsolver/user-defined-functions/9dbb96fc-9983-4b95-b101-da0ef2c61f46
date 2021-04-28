@@ -1,0 +1,44 @@
+{
+  "clazz" : "PythonUserDefinedFunction",
+  "id" : "9dbb96fc-9983-4b95-b101-da0ef2c61f46",
+  "name" : "filter_on_mask",
+  "documentation" : "",
+  "arguments" : [ {
+    "name" : "arr",
+    "typeName" : {
+      "name" : "number",
+      "isArray" : true,
+      "subFields" : [ ]
+    }
+  }, {
+    "name" : "mask",
+    "typeName" : {
+      "name" : "boolean",
+      "isArray" : true,
+      "subFields" : [ ]
+    }
+  } ],
+  "returnType" : {
+    "name" : "number",
+    "isArray" : true,
+    "subFields" : [ ]
+  },
+  "position" : {
+    "fileName" : "upsolver_udf.py",
+    "lineNumber" : 48
+  },
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connectionId" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "token" : "38b0c0da-acbb-42bb-923d-5f2cd1360b85/upsolver_udf.py",
+  "displayData" : {
+    "name" : "filter_on_mask",
+    "description" : "",
+    "creationTime" : "2021-04-27T13:09:08.904205Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-27T13:09:08.938564Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "61582208-6be5-4881-a211-232ad31cc711"
+  }
+}

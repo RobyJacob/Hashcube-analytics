@@ -1,0 +1,37 @@
+{
+  "clazz" : "PythonUserDefinedFunction",
+  "id" : "e9e4b0d6-74d5-4065-95d8-48206f82b057",
+  "name" : "get_count",
+  "documentation" : "",
+  "arguments" : [ {
+    "name" : "uid",
+    "typeName" : {
+      "name" : "string",
+      "isArray" : false,
+      "subFields" : [ ]
+    }
+  } ],
+  "returnType" : {
+    "name" : "number",
+    "isArray" : false,
+    "subFields" : [ ]
+  },
+  "position" : {
+    "fileName" : "upsolver_udf.py",
+    "lineNumber" : 162
+  },
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "connectionId" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "token" : "27048b77-64ae-4a69-8d1b-cce9f27865a3/upsolver_udf.py",
+  "displayData" : {
+    "name" : "get_count",
+    "description" : "",
+    "creationTime" : "2021-04-23T14:59:50.274056Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-23T14:59:50.297252Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "883b2ee8-f9e1-4545-80dd-222f34b4291c"
+  }
+}

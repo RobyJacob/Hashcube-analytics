@@ -1,0 +1,49 @@
+{
+  "clazz" : "S3OverSQSInput",
+  "id" : "fc5cc052-96bc-4dad-9d08-7b2fea293603",
+  "globalId" : "fc5cc052-96bc-4dad-9d08-7b2fea293603",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "sourceStorage" : "2d79eace-54f7-4b63-8ead-dd4543b5cded",
+  "prefix" : "purchase_validation/",
+  "suffix" : "",
+  "queueName" : "upsolver_fc5cc052-96bc-4dad-9d08-7b2fea293603_upsolver-reference-data",
+  "destinationStorage" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
+  "previousLocations" : {
+    "locations" : [ ]
+  },
+  "startExecutionFrom" : "2021-04-24T06:56:47.828425Z",
+  "compression" : {
+    "clazz" : "AutoDetectCompression",
+    "displayName" : "Auto Detect (Supports ZIP, GZip, Tar, Snappy and AWS KPL)"
+  },
+  "contentType" : {
+    "clazz" : "ParquetContentType"
+  },
+  "displayData" : {
+    "name" : "mq_cash_purchase_validation",
+    "description" : "",
+    "creationTime" : "2021-04-24T06:56:47.828425Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedTime" : "2021-04-24T06:57:15.876940Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "04214c28-16bc-415e-a08e-cbd54a2c49fe"
+  },
+  "isDeleted" : false,
+  "softRetention" : false,
+  "version" : 58,
+  "operationParallelism" : {
+    "clazz" : "NoOperationParallelism"
+  },
+  "workspaces" : [ ],
+  "reportingTags" : "",
+  "previewId" : "b5511e5cf6ff401b6c06ca5f80435846",
+  "isRunning" : true,
+  "executionParallelism" : 1,
+  "status" : {
+    "clazz" : "Running"
+  },
+  "safeStartTime" : "2021-04-24T06:56:47.828425Z"
+}
