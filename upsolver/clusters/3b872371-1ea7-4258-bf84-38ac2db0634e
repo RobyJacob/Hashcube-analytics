@@ -6,11 +6,11 @@
     "description" : "",
     "creationTime" : "2021-04-28T08:08:46.217602Z",
     "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
-    "modifiedTime" : "2021-04-28T08:08:46.219734Z",
+    "modifiedTime" : "2021-04-28T08:11:44.267501Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "6caa1b97-7cb1-4f3f-b497-bc4658986b0c"
+    "versionId" : "641cb31b-375a-4ee1-ba4b-7c7dd5ff03ba"
   },
   "size" : {
     "min" : "S",
@@ -36,9 +36,9 @@
     "clazz" : "DeploymentType$AWS",
     "amiTagName" : "UpsolverPrivateVpc"
   },
-  "isDeleted" : false,
+  "isDeleted" : true,
   "lastUpdatedBy" : "roby.jacob@hashcube.com",
-  "lastUpdateTime" : "2021-04-28T08:11:44.267401Z",
+  "lastUpdateTime" : "2021-04-28T08:11:49.157466Z",
   "version" : 59,
   "allowUpsolverSsh" : true,
   "exposePrivateIps" : false,
