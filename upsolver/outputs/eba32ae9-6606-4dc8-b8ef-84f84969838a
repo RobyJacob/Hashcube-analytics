@@ -8,16 +8,16 @@
     "description" : "Duplicate of mq_an_user_device",
     "creationTime" : "2021-04-28T06:59:47.446758Z",
     "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
-    "modifiedTime" : "2021-04-28T07:02:56.496114Z",
+    "modifiedTime" : "2021-04-28T08:09:08.653893Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "993e79e9-7c80-4327-b077-d0e6d245808a"
+    "versionId" : "af7ce461-faaa-4624-abc1-3d1ec8ab8ef3"
   },
   "inputs" : [ "6d99638e-7a31-457c-9dc8-5bd63816ae1c" ],
   "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
   "groupBy" : false,
-  "computeEnvironment" : "3b872371-1ea7-4258-bf84-38ac2db0634e",
+  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
   "outputParameters" : {
     "clazz" : "CompositeHiveMetastoreOutputParameters",
     "outputFields" : [ {
