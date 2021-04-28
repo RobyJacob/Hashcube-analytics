@@ -10,11 +10,11 @@
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "281101c6-5f53-49a8-ae15-cfa75912e8b9"
+    "versionId" : "4c033464-34fd-4a67-8544-26f3ec979c8a"
   },
   "size" : {
     "min" : "XS",
-    "max" : "XS"
+    "max" : "S"
   },
   "environmentType" : "query",
   "region" : "us-east-1",
@@ -37,7 +37,7 @@
   },
   "isDeleted" : false,
   "lastUpdatedBy" : "roby.jacob@hashcube.com",
-  "lastUpdateTime" : "2021-04-17T16:42:43.856175Z",
+  "lastUpdateTime" : "2021-04-28T07:26:21.058331Z",
   "version" : 58,
   "allowUpsolverSsh" : false,
   "exposePrivateIps" : false,
