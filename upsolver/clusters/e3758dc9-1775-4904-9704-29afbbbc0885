@@ -6,11 +6,11 @@
     "description" : "Default Compute for hashcube",
     "creationTime" : "2021-03-16T10:36:19.118943Z",
     "createdBy" : "Upsolver Integration",
-    "modifiedTime" : "2021-04-28T04:02:11.798728Z",
+    "modifiedTime" : "2021-04-28T07:37:01.196900Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "b5613728-3d86-4a36-8819-1d6e6fdd29e1"
+    "versionId" : "e143d944-865c-4479-8d9c-71a83c072221"
   },
   "size" : {
     "min" : "XS",
@@ -30,8 +30,7 @@
   "instanceTypeOverride" : "r5.4xlarge",
   "nextRollTime" : "2021-04-20T11:41:20.319077Z",
   "writeLogsToUpsolver" : false,
-  "runReplayCluster" : false,
-  "maxReplayClusterSize" : "XS",
+  "runReplayCluster" : true,
   "extraSecurityGroups" : [ ],
   "scalingProviderOverride" : "lowlatency",
   "deploymentType" : {
@@ -40,7 +39,7 @@
   },
   "isDeleted" : false,
   "lastUpdatedBy" : "roby.jacob@hashcube.com",
-  "lastUpdateTime" : "2021-04-28T07:37:01.196823Z",
+  "lastUpdateTime" : "2021-04-28T07:37:44.028698Z",
   "version" : 58,
   "allowUpsolverSsh" : true,
   "exposePrivateIps" : false,
