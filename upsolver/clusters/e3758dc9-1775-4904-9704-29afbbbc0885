@@ -6,11 +6,11 @@
     "description" : "Default Compute for hashcube",
     "creationTime" : "2021-03-16T10:36:19.118943Z",
     "createdBy" : "Upsolver Integration",
-    "modifiedTime" : "2021-04-28T07:37:44.028773Z",
+    "modifiedTime" : "2021-04-28T08:12:39.162624Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "e29c38fd-d59c-4552-a52c-87643d7fb8a4"
+    "versionId" : "670c87ba-55a7-4997-a847-54879c80630e"
   },
   "size" : {
     "min" : "XS",
@@ -39,7 +39,7 @@
   },
   "isDeleted" : false,
   "lastUpdatedBy" : "roby.jacob@hashcube.com",
-  "lastUpdateTime" : "2021-04-28T08:12:39.162010Z",
+  "lastUpdateTime" : "2021-04-28T08:18:35.956753Z",
   "version" : 58,
   "allowUpsolverSsh" : true,
   "exposePrivateIps" : false,
