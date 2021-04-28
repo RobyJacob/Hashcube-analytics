@@ -6,11 +6,11 @@
     "description" : "",
     "creationTime" : "2021-04-28T08:05:54.575874Z",
     "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
-    "modifiedTime" : "2021-04-28T08:06:20.184602Z",
+    "modifiedTime" : "2021-04-28T08:06:38.252788Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "1fc02d44-c106-4be5-bd0f-8d6b698a987a"
+    "versionId" : "46925330-d17c-4522-8e90-3a5c448f9d02"
   },
   "size" : {
     "min" : "XS",
@@ -21,7 +21,7 @@
   "hosts" : {
     "hosts" : [ ]
   },
-  "running" : true,
+  "running" : false,
   "runOnDefault" : false,
   "elasticIps" : {
     "value" : true,
@@ -38,7 +38,7 @@
   },
   "isDeleted" : false,
   "lastUpdatedBy" : "roby.jacob@hashcube.com",
-  "lastUpdateTime" : "2021-04-28T08:06:38.252699Z",
+  "lastUpdateTime" : "2021-04-28T08:07:57.492016Z",
   "version" : 59,
   "allowUpsolverSsh" : true,
   "exposePrivateIps" : false,
@@ -61,6 +61,6 @@
   "clazz" : "CustomerEnvironment",
   "scalingProvider" : "Low Latency",
   "status" : {
-    "clazz" : "Running"
+    "clazz" : "Stopped"
   }
 }
