@@ -8,11 +8,11 @@
     "description" : "Duplicate of mq_device_kochava_lookup",
     "creationTime" : "2021-04-16T14:54:52.012198Z",
     "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
-    "modifiedTime" : "2021-04-28T07:01:06.018056Z",
+    "modifiedTime" : "2021-04-28T07:03:42.610785Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "e68a9c1b-910f-461a-8abc-85cbfc0725d3"
+    "versionId" : "4f427dc0-14a8-4cbd-b12f-833e1fe589c5"
   },
   "inputs" : [ "6d99638e-7a31-457c-9dc8-5bd63816ae1c", "79b6b09a-31de-4eaf-a206-28d2ff12182f" ],
   "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
