@@ -8,16 +8,16 @@
     "description" : "Duplicate of mq_an_user_device",
     "creationTime" : "2021-04-28T06:59:47.446758Z",
     "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
-    "modifiedTime" : "2021-04-28T07:02:47.845382Z",
+    "modifiedTime" : "2021-04-28T07:02:56.496114Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "61fa750c-37a9-483c-b635-a39eb15e4ce1"
+    "versionId" : "993e79e9-7c80-4327-b077-d0e6d245808a"
   },
   "inputs" : [ "6d99638e-7a31-457c-9dc8-5bd63816ae1c" ],
   "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
   "groupBy" : false,
-  "computeEnvironment" : "e3758dc9-1775-4904-9704-29afbbbc0885",
+  "computeEnvironment" : "3b872371-1ea7-4258-bf84-38ac2db0634e",
   "outputParameters" : {
     "clazz" : "CompositeHiveMetastoreOutputParameters",
     "outputFields" : [ {
@@ -2720,10 +2720,10 @@
             "subFields" : [ ]
           },
           "field" : {
-            "name" : "puzzle_lookup.datetimes",
+            "name" : "puzzle_lookup.datetimes[]",
             "nativeType" : {
               "name" : "number",
-              "isArray" : true,
+              "isArray" : false,
               "subFields" : [ ]
             }
           },
@@ -2976,10 +2976,10 @@
             "subFields" : [ ]
           },
           "field" : {
-            "name" : "puzzle_lookup.datetimes",
+            "name" : "puzzle_lookup.datetimes[]",
             "nativeType" : {
               "name" : "number",
-              "isArray" : true,
+              "isArray" : false,
               "subFields" : [ ]
             }
           },
@@ -4606,10 +4606,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_date_parsed",
+              "name" : "puzzle_date_parsed[]",
               "nativeType" : {
                 "name" : "instant",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -4677,10 +4677,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_lookup.progresses",
+              "name" : "puzzle_lookup.progresses[]",
               "nativeType" : {
                 "name" : "number",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -4761,10 +4761,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_date_parsed",
+              "name" : "puzzle_date_parsed[]",
               "nativeType" : {
                 "name" : "instant",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -4832,10 +4832,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_lookup.progresses",
+              "name" : "puzzle_lookup.progresses[]",
               "nativeType" : {
                 "name" : "number",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -4916,10 +4916,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_date_parsed",
+              "name" : "puzzle_date_parsed[]",
               "nativeType" : {
                 "name" : "instant",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -4987,10 +4987,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_lookup.progresses",
+              "name" : "puzzle_lookup.progresses[]",
               "nativeType" : {
                 "name" : "number",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -5071,10 +5071,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_date_parsed",
+              "name" : "puzzle_date_parsed[]",
               "nativeType" : {
                 "name" : "instant",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -5142,10 +5142,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_lookup.progresses",
+              "name" : "puzzle_lookup.progresses[]",
               "nativeType" : {
                 "name" : "number",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -5206,10 +5206,10 @@
               "subFields" : [ ]
             },
             "field" : {
-              "name" : "puzzle_date_parsed",
+              "name" : "puzzle_date_parsed[]",
               "nativeType" : {
                 "name" : "instant",
-                "isArray" : true,
+                "isArray" : false,
                 "subFields" : [ ]
               }
             },
@@ -5525,10 +5525,10 @@
             "subFields" : [ ]
           },
           "field" : {
-            "name" : "streak",
+            "name" : "streak[]",
             "nativeType" : {
               "name" : "number",
-              "isArray" : true,
+              "isArray" : false,
               "subFields" : [ ]
             }
           },
@@ -5577,10 +5577,10 @@
             "subFields" : [ ]
           },
           "field" : {
-            "name" : "streak",
+            "name" : "streak[]",
             "nativeType" : {
               "name" : "number",
-              "isArray" : true,
+              "isArray" : false,
               "subFields" : [ ]
             }
           },
@@ -5876,10 +5876,10 @@
             "subFields" : [ ]
           },
           "field" : {
-            "name" : "hours",
+            "name" : "hours[]",
             "nativeType" : {
               "name" : "number",
-              "isArray" : true,
+              "isArray" : false,
               "subFields" : [ ]
             }
           },
@@ -6161,10 +6161,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "puzzle_lookup.msnos",
+                "name" : "puzzle_lookup.msnos[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6285,10 +6285,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "puzzle_lookup.msnos",
+                "name" : "puzzle_lookup.msnos[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6409,10 +6409,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "puzzle_lookup.msnos",
+                "name" : "puzzle_lookup.msnos[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6533,10 +6533,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "puzzle_lookup.msnos",
+                "name" : "puzzle_lookup.msnos[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6636,10 +6636,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6675,10 +6675,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6776,10 +6776,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6815,10 +6815,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6916,10 +6916,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -6955,10 +6955,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -7056,10 +7056,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -7095,10 +7095,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -7196,10 +7196,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -7235,10 +7235,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -7336,10 +7336,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
@@ -7375,10 +7375,10 @@
                 "subFields" : [ ]
               },
               "field" : {
-                "name" : "hours_parsed",
+                "name" : "hours_parsed[]",
                 "nativeType" : {
                   "name" : "number",
-                  "isArray" : true,
+                  "isArray" : false,
                   "subFields" : [ ]
                 }
               },
