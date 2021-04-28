@@ -12,7 +12,7 @@
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "0955f2ff-bd01-483f-b525-32c6c829041e"
+    "versionId" : "f63f19c3-fdb5-42bc-8b09-843557795ff4"
   },
   "inputs" : [ "05ade5d7-702e-48b6-bba4-e6aa83131320" ],
   "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
@@ -2663,8 +2663,8 @@
   "startExecutionFrom" : "2021-04-27T18:28:00Z",
   "endExecutionAt" : "2021-04-27T20:34:00Z",
   "allowCartesianProducts" : false,
-  "isDeleted" : false,
-  "isRunning" : true,
+  "isDeleted" : true,
+  "isRunning" : false,
   "deployedEver" : true,
   "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
   "link" : {
@@ -2675,7 +2675,7 @@
   },
   "physicalDelete" : {
     "initiated" : true,
-    "shouldRun" : true
+    "shouldRun" : false
   },
   "version" : 59,
   "allowRenaming" : true,
@@ -2704,7 +2704,7 @@
   "inputInterval" : 1,
   "restrictions" : [ ],
   "status" : {
-    "clazz" : "Deleting"
+    "clazz" : "Archived"
   },
   "shards" : 1,
   "outputShards" : 1,
