@@ -1,0 +1,62 @@
+{
+  "id" : "d8a04b34-9e1f-407e-990a-a00298f37f6b",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "displayData" : {
+    "name" : "realtime_cluster",
+    "description" : "",
+    "creationTime" : "2021-04-28T08:05:54.575874Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedBy" : { },
+    "versionId" : "7540450c-55fb-4f7c-bbac-632f348360dd"
+  },
+  "size" : {
+    "min" : "XS",
+    "max" : "M"
+  },
+  "environmentType" : "realtime",
+  "region" : "us-east-1",
+  "hosts" : {
+    "hosts" : [ ]
+  },
+  "running" : true,
+  "runOnDefault" : false,
+  "elasticIps" : {
+    "value" : true,
+    "userEmail" : "roby.jacob@hashcube.com"
+  },
+  "writeLogsToUpsolver" : true,
+  "runReplayCluster" : false,
+  "extraSecurityGroups" : [ ],
+  "scalingProviderOverride" : "lowlatency",
+  "deploymentType" : {
+    "clazz" : "DeploymentType$AWS",
+    "amiTagName" : "UpsolverPrivateVpc"
+  },
+  "isDeleted" : false,
+  "lastUpdatedBy" : "roby.jacob@hashcube.com",
+  "lastUpdateTime" : "2021-04-28T08:05:54.583124Z",
+  "version" : 59,
+  "allowUpsolverSsh" : false,
+  "exposePrivateIps" : false,
+  "alwaysAssociatePublicIps" : false,
+  "useVersionsCoordinator" : false,
+  "assumeRoleOnServerRole" : false,
+  "storeType" : {
+    "clazz" : "RemoteStoreType",
+    "secretKey" : "6wrrnfgdPaUeLTiVGZiG1NMT9od0NHNpSX0+SS7tu7V23Ymf4OAUHnv3yZm20agU"
+  },
+  "workspaces" : [ ],
+  "shouldCompareConfiguration" : true,
+  "tags" : {
+    "tags" : [ ]
+  },
+  "extraSpotTypes" : [ ],
+  "lastDeploymentTime" : "2021-04-28T08:05:54.576429Z",
+  "excludeMonitoringReporters" : [ ],
+  "hibernated" : false,
+  "clazz" : "CustomerEnvironment",
+  "scalingProvider" : "Low Latency",
+  "status" : {
+    "clazz" : "Running"
+  }
+}
