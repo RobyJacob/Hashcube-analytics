@@ -12,7 +12,7 @@
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "7cad2b64-817c-4ffa-a443-44f2030eac6e"
+    "versionId" : "08794965-f0d6-4da5-b821-5a184e5f8e49"
   },
   "inputs" : [ "6d99638e-7a31-457c-9dc8-5bd63816ae1c", "79b6b09a-31de-4eaf-a206-28d2ff12182f" ],
   "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
@@ -404,7 +404,7 @@
   "startExecutionFrom" : "2021-04-13T10:37:20.784664Z",
   "allowCartesianProducts" : false,
   "isDeleted" : false,
-  "isRunning" : true,
+  "isRunning" : false,
   "deployedEver" : true,
   "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
   "version" : 58,
@@ -433,7 +433,7 @@
   "inputInterval" : 1,
   "restrictions" : [ ],
   "status" : {
-    "clazz" : "Running"
+    "clazz" : "Stopped"
   },
   "shards" : 1,
   "outputShards" : 1,
