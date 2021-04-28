@@ -6,8 +6,11 @@
     "description" : "",
     "creationTime" : "2021-04-28T08:05:54.575874Z",
     "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
-    "modifiedBy" : { },
-    "versionId" : "7540450c-55fb-4f7c-bbac-632f348360dd"
+    "modifiedTime" : "2021-04-28T08:05:54.583247Z",
+    "modifiedBy" : {
+      "value" : "Roby Jacob (roby.jacob@hashcube.com)"
+    },
+    "versionId" : "d3649e0a-6ada-478a-877e-960ba241bcca"
   },
   "size" : {
     "min" : "XS",
@@ -24,6 +27,7 @@
     "value" : true,
     "userEmail" : "roby.jacob@hashcube.com"
   },
+  "instanceTypeOverride" : "r5.4xlarge",
   "writeLogsToUpsolver" : true,
   "runReplayCluster" : false,
   "extraSecurityGroups" : [ ],
@@ -34,7 +38,7 @@
   },
   "isDeleted" : false,
   "lastUpdatedBy" : "roby.jacob@hashcube.com",
-  "lastUpdateTime" : "2021-04-28T08:05:54.583124Z",
+  "lastUpdateTime" : "2021-04-28T08:06:20.184522Z",
   "version" : 59,
   "allowUpsolverSsh" : false,
   "exposePrivateIps" : false,
