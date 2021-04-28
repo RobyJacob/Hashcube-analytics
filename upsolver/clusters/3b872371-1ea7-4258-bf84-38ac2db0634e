@@ -1,0 +1,64 @@
+{
+  "id" : "3b872371-1ea7-4258-bf84-38ac2db0634e",
+  "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
+  "displayData" : {
+    "name" : "heavy_compute",
+    "description" : "",
+    "creationTime" : "2021-04-28T08:08:46.217602Z",
+    "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
+    "modifiedBy" : { },
+    "versionId" : "1f4098f4-9d24-4360-97ad-53ab67a800e4"
+  },
+  "size" : {
+    "min" : "S",
+    "max" : "M"
+  },
+  "environmentType" : "compute",
+  "region" : "us-east-1",
+  "hosts" : {
+    "hosts" : [ ]
+  },
+  "running" : true,
+  "runOnDefault" : false,
+  "elasticIps" : {
+    "value" : false,
+    "userEmail" : "roby.jacob@hashcube.com"
+  },
+  "instanceTypeOverride" : "r5.2xlarge",
+  "writeLogsToUpsolver" : true,
+  "runReplayCluster" : false,
+  "extraSecurityGroups" : [ ],
+  "scalingProviderOverride" : "lowlatency",
+  "deploymentType" : {
+    "clazz" : "DeploymentType$AWS",
+    "amiTagName" : "UpsolverPrivateVpc"
+  },
+  "isDeleted" : false,
+  "lastUpdatedBy" : "roby.jacob@hashcube.com",
+  "lastUpdateTime" : "2021-04-28T08:08:46.219656Z",
+  "version" : 59,
+  "allowUpsolverSsh" : true,
+  "exposePrivateIps" : false,
+  "alwaysAssociatePublicIps" : false,
+  "useVersionsCoordinator" : false,
+  "assumeRoleOnServerRole" : false,
+  "storeType" : {
+    "clazz" : "RemoteStoreType",
+    "secretKey" : "tIioly4uhv8qWTLayEdJp2Et3h/KOd5lkSjH6tYe0Y11P4O97aPD0/Rc13WN/giK"
+  },
+  "workspaces" : [ ],
+  "shouldCompareConfiguration" : true,
+  "tags" : {
+    "tags" : [ ]
+  },
+  "extraSpotTypes" : [ ],
+  "lastDeploymentTime" : "2021-04-28T08:08:46.217658Z",
+  "excludeMonitoringReporters" : [ ],
+  "hibernated" : false,
+  "clazz" : "CustomerEnvironment",
+  "serverType" : "1 (r5.2xlarge - 8 cores, 60GB RAM)",
+  "scalingProvider" : "Low Latency",
+  "status" : {
+    "clazz" : "Running"
+  }
+}
