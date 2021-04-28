@@ -8,11 +8,11 @@
     "description" : "Duplicate of mq_an_cash_purchase",
     "creationTime" : "2021-04-23T17:26:35.925320Z",
     "createdBy" : "Roby Jacob (roby.jacob@hashcube.com)",
-    "modifiedTime" : "2021-04-25T19:40:44.348978Z",
+    "modifiedTime" : "2021-04-28T07:03:42.581409Z",
     "modifiedBy" : {
       "value" : "Roby Jacob (roby.jacob@hashcube.com)"
     },
-    "versionId" : "1527de9b-3582-4204-ac29-8429bddbf8e5"
+    "versionId" : "03a84da8-c9d0-46d3-873c-0408d7e0a607"
   },
   "inputs" : [ "181129a2-4176-4d4f-a0ee-5d8cb891b94e" ],
   "organizationId" : "33b7cf17-9f45-4e72-824d-10bd03e88dde",
@@ -2191,8 +2191,8 @@
   "outputInterval" : 1,
   "startExecutionFrom" : "2021-04-23T19:41:00Z",
   "allowCartesianProducts" : true,
-  "isDeleted" : true,
-  "isRunning" : false,
+  "isDeleted" : false,
+  "isRunning" : true,
   "deployedEver" : true,
   "connectionPointer" : "9a50b066-44ab-4fb3-bdb2-e21636425647",
   "link" : {
@@ -2202,8 +2202,8 @@
     "isCorrection" : false
   },
   "physicalDelete" : {
-    "initiated" : false,
-    "shouldRun" : false
+    "initiated" : true,
+    "shouldRun" : true
   },
   "version" : 58,
   "allowRenaming" : true,
@@ -2231,7 +2231,7 @@
   "inputInterval" : 1,
   "restrictions" : [ ],
   "status" : {
-    "clazz" : "Archived"
+    "clazz" : "Deleting"
   },
   "shards" : 1,
   "outputShards" : 1,
